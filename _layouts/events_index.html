@@ -13,7 +13,7 @@ layout: default
     <div class="event-cards">
       {% for event in upcoming %}
         {% assign t = event.translations[page.lang] %}
-        <a class="event-card" href="{{ '/' | append: page.lang | append: '/events/' | append: event.id | append: '/' | relative_url }}">
+        <a class="event-card reveal" href="{{ '/' | append: page.lang | append: '/events/' | append: event.id | append: '/' | relative_url }}">
           <span class="event-card__date">{{ event.date }}</span>
           <span class="event-card__name">{{ t.name }}</span>
           <span class="event-card__location">{{ t.location }}</span>
@@ -29,7 +29,7 @@ layout: default
     <div class="event-cards">
       {% for event in past %}
         {% assign t = event.translations[page.lang] %}
-        <a class="event-card event-card--past" href="{{ '/' | append: page.lang | append: '/events/' | append: event.id | append: '/' | relative_url }}">
+        <a class="event-card event-card--past reveal" href="{{ '/' | append: page.lang | append: '/events/' | append: event.id | append: '/' | relative_url }}">
           <span class="event-card__date">{{ event.date }}</span>
           <span class="event-card__name">{{ t.name }}</span>
           <span class="event-card__location">{{ t.location }}</span>
@@ -40,3 +40,11 @@ layout: default
     <p class="empty-state">{{ site.data.ui[page.lang].no_past }}</p>
   {% endif %}
 </div>
+
+<section class="quote-cta reveal">
+  <div class="wrap quote-cta__inner">
+    <h2>{{ site.data.ui[page.lang].gallery_cta_title }}</h2>
+    <p>{{ site.data.ui[page.lang].gallery_cta_body }}</p>
+    <a class="btn btn--accent" href="{{ '/' | append: page.lang | append: '/contact/' | relative_url }}">{{ site.data.ui[page.lang].gallery_cta_button }}</a>
+  </div>
+</section>

@@ -1,37 +1,64 @@
 ---
 layout: default
 ---
+{% assign ui = site.data.ui[page.lang] %}
 <section class="hero">
   <div class="wrap hero__inner">
     <svg class="hero__mark" viewBox="0 0 200 120" aria-hidden="true">
       <polyline points="4,100 40,80 76,88 112,48 148,58 196,12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M196 12 L200 22 L210 23 L202 30 L204 40 L196 35 L188 40 L190 30 L182 23 L192 22 Z" fill="currentColor"/>
     </svg>
-    <h1 class="hero__title">{{ site.data.ui[page.lang].hero_title }}</h1>
-    <p class="hero__subtitle">{{ site.data.ui[page.lang].hero_subtitle }}</p>
-    <a class="btn btn--accent" href="{{ '/' | append: page.lang | append: '/events/' | relative_url }}">{{ site.data.ui[page.lang].hero_cta }}</a>
+    <h1 class="hero__title">{{ ui.hero_title }}</h1>
+    <p class="hero__subtitle">{{ ui.hero_subtitle }}</p>
+    <div class="hero__ctas">
+      <a class="btn btn--accent" href="{{ '/' | append: page.lang | append: '/events/' | relative_url }}">{{ ui.hero_cta }}</a>
+      <a class="btn btn--ghost" href="{{ '/' | append: page.lang | append: '/contact/' | relative_url }}">{{ ui.hero_cta_secondary }}</a>
+    </div>
   </div>
 </section>
 
-<section class="teaser">
+<section class="teaser reveal">
   <div class="wrap teaser__inner">
-    <h2>{{ site.data.ui[page.lang].about_teaser_title }}</h2>
-    <p>{{ site.data.ui[page.lang].about_teaser_body }}</p>
-    <a class="link-arrow" href="{{ '/' | append: page.lang | append: '/about/' | relative_url }}">{{ site.data.ui[page.lang].about_teaser_cta }} →</a>
+    <h2>{{ ui.about_teaser_title }}</h2>
+    <p>{{ ui.about_teaser_body }}</p>
+    <a class="link-arrow" href="{{ '/' | append: page.lang | append: '/about/' | relative_url }}">{{ ui.about_teaser_cta }} →</a>
   </div>
 </section>
 
-<section class="teaser teaser--accent">
-  <div class="wrap teaser__inner">
-    <span class="badge">{{ site.data.ui[page.lang].product_badge }}</span>
-    <h2>{{ site.data.ui[page.lang].product_title }}</h2>
-    <p>{{ site.data.ui[page.lang].product_body }}</p>
+<section class="teaser teaser--accent reveal">
+  <div class="wrap">
+    <div class="teaser__inner">
+      <span class="badge">{{ ui.product_badge }}</span>
+      <h2>{{ ui.product_title }}</h2>
+      <p>{{ ui.product_body }}</p>
+      <p>{{ ui.product_intro }}</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <h3>{{ ui.feature_registration_title }}</h3>
+        <p>{{ ui.feature_registration_body }}</p>
+      </div>
+      <div class="feature-card reveal">
+        <h3>{{ ui.feature_landing_title }}</h3>
+        <p>{{ ui.feature_landing_body }}</p>
+      </div>
+      <div class="feature-card reveal">
+        <h3>{{ ui.feature_scoring_title }}</h3>
+        <p>{{ ui.feature_scoring_body }}</p>
+      </div>
+      <div class="feature-card reveal">
+        <h3>{{ ui.feature_platform_title }}</h3>
+        <p>{{ ui.feature_platform_body }}</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="teaser">
-  <div class="wrap teaser__inner">
-    <h2>{{ site.data.ui[page.lang].contact_teaser_title }}</h2>
-    <a class="link-arrow" href="{{ '/' | append: page.lang | append: '/contact/' | relative_url }}">{{ site.data.ui[page.lang].contact_teaser_cta }} →</a>
+<section class="quote-cta reveal">
+  <div class="wrap quote-cta__inner">
+    <h2>{{ ui.quote_title }}</h2>
+    <p>{{ ui.quote_body }}</p>
+    <a class="btn btn--accent" href="{{ '/' | append: page.lang | append: '/contact/' | relative_url }}">{{ ui.quote_cta }}</a>
   </div>
 </section>

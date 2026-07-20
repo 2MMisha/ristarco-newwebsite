@@ -124,6 +124,70 @@ bundle exec jekyll serve
 Then open `http://localhost:4000`. Not required — GitHub Actions builds it
 for you on every push — but useful for checking changes before pushing.
 
+## 9. Logo, contacts, and the "Get a quote" CTAs
+
+- **Logo**: `assets/img/logo.png` currently holds a placeholder "RSM" wordmark
+  (white, transparent background). Replace that file with your real white
+  logo.png (same filename) once you have it — no template changes needed.
+- **Contacts**: phone, WhatsApp, both emails, and Instagram are all set in
+  `_config.yml` under `org:`. They render via `_includes/contact-links.html`,
+  used in the footer (every page), the Contact page, and — for the
+  registration email specifically — under each event's Registration tab.
+- **Accent color**: `--rsm-accent` (coral, used for buttons/CTAs) is now
+  separate from `--rsm-soon` (yellow, used *only* for the "SOON" badge on
+  the platform teaser) — both are CSS variables at the top of
+  `assets/css/main.css`.
+- **"Get a quote" CTAs**: the homepage hero has a second button, the
+  platform section describes the actual features (registration, event
+  landing pages, the three scoring systems, multiplatform), followed by a
+  full-width "Ready to run your competition with us?" CTA — and the same
+  CTA pattern repeats at the bottom of the Gallery page. All the copy for
+  these lives in `_data/ui.yml` (`quote_*` and `gallery_cta_*` keys) if you
+  want to adjust the wording.
+
+## 10. Ideas worth considering next
+
+A few things that would strengthen the site as it grows, in rough order of impact:
+
+- **A real contact form** (not just mailto/wa.me links) on the Contact page — e.g. a
+  Formspree or Google Form embed like the one already used for event registration,
+  so quote requests land in your inbox with structured info (event size, date,
+  scoring type needed) instead of a blank email.
+- **Photos** — the events currently have no image gallery; even 3–5 photos per past
+  competition would make the Gallery page and each event's overview page far more
+  convincing to a prospective organizer.
+- **Testimonials / past organizers** — a short quote or logo from a past sponsor or
+  partner organization on the homepage would reinforce the "we already run real
+  competitions" pitch that the platform section is making.
+- **Sitemap already handled** — `jekyll-sitemap` is wired in, so once the domain is
+  live, submit `https://ristar.co/sitemap.xml` to Google Search Console for each
+  language to get indexed faster.
+- **Analytics** — nothing is tracking visits yet; a privacy-friendly option (e.g.
+  Plausible or Simple Analytics) would tell you which language/page people actually
+  convert from before you invest more in copy.
+- **A short "for organizers" paragraph** on the Contact page, distinct from the
+  competitor-facing contact info — since the platform pitch and the
+  "join our competition" audience are different people asking for different things.
+
+## 11. Logo (SVG), favicon, animations, accessibility widget
+
+- **Logo**: now `assets/img/logo.svg` (your uploaded file), shown at 32px
+  tall in the header — swap the file to update it, no template changes.
+- **Favicon**: `assets/img/icon.ico` (your uploaded file) is wired into
+  every page's `<head>` and shows in browser tabs and link previews.
+- **Animations**: subtle only — the hero fades/rises in on load, and
+  sections/cards gently reveal as you scroll to them. Fully respects
+  `prefers-reduced-motion`, and content is visible even with JavaScript
+  disabled (animation is progressive enhancement, not a requirement to see
+  anything). Logic in `assets/js/animations.js`.
+- **Accessibility widget**: a small self-built, free, no-tracking widget —
+  the floating button bottom-right on every page (`_includes/a11y-widget.html`,
+  `assets/js/a11y-widget.js`). Lets visitors adjust text size, toggle high
+  contrast, underline links, switch to a plain readable font, and reduce
+  motion — preferences are saved in their browser (`localStorage`), not sent
+  anywhere. No third-party service, so no monthly cost and no external
+  script loading on your site.
+
 ## Project structure
 
 ```

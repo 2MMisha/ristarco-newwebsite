@@ -5,19 +5,14 @@ title: Contact
 permalink: /en/contact/
 ---
 
+Reach us directly, or send a message about registration, sponsorship, or ordering our platform for your own competition — we'll get back to you quickly.
+
+{% include contact-links.html show_registration_email=true %}
+
 <!--
-  This page is a scaffold. Replace/extend below with real details.
-  Suggested sections for a "Contact" page:
-
-  1. Direct contact — email (site.org.email is already wired into the footer),
-     phone, and/or a contact form (e.g. a Formspree/Google Form embed, same
-     pattern used for event registration).
-  2. Social links — Instagram / Facebook / etc. (site.org.social is ready in _config.yml).
-  3. For organizers — a note for people interested in your platform ("product" teaser
-     on the homepage) who want to get in touch about it specifically.
-  4. Address / location, only if you want it public.
+  Scaffold note: still worth adding, if you want them —
+  1. Social links beyond Instagram (Facebook etc. — site.org.social in _config.yml).
+  2. Address / physical location, only if you want it public.
+  3. A short "for organizers" paragraph if you want to speak directly to people
+     interested in buying the platform, separate from competition participants.
 -->
-
-**Email:** [{{ site.org.email }}](mailto:{{ site.org.email }})
-
-*Add phone, social links, or a contact form here.*

@@ -21,11 +21,13 @@ lang_dirs:
 org:
   name: "Rising Star Manager"
   short_name: "RSM"
-  email: "info@ristar.co"
-  phone: ""
+  email: "2mmedia.il@gmail.com"
+  registration_email: "reg.ristar.co@gmail.com"
+  phone: "+972547798676"
+  phone_display: "+972 54 779 8676"
   address: ""
   social:
-    instagram: ""
+    instagram: "2mmedia.il"
     facebook: ""
 
 plugins:

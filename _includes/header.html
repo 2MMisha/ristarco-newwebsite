@@ -1,10 +1,7 @@
 <header class="site-header">
   <div class="wrap site-header__inner">
     <a class="brand" href="{{ '/' | append: page.lang | append: '/' | relative_url }}">
-      <span class="brand__mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="28" height="28"><path d="M16 3 L19.5 12.5 L29 13.5 L21.5 20 L23.5 29 L16 24 L8.5 29 L10.5 20 L3 13.5 L12.5 12.5 Z" fill="currentColor"/></svg>
-      </span>
-      <span class="brand__text">{{ site.org.short_name }}</span>
+      <img class="brand__logo" src="{{ '/assets/img/logo.svg' | relative_url }}" alt="{{ site.org.short_name }}" height="32">
     </a>
 
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" onclick="document.getElementById('site-nav').classList.toggle('is-open'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') !== 'true');">
