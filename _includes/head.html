@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }} · {{ site.org.short_name }}</title>
+{% seo %}
+
+<!-- hreflang alternates so search engines index all three languages correctly -->
+{% assign this_path = page.url | remove_first: "/" %}
+{% assign path_parts = this_path | split: "/" %}
+{% assign rest_of_path = path_parts | slice: 1, 99 | join: "/" %}
+{% for lang in site.languages %}
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}/{{ lang }}/{{ rest_of_path }}{% unless rest_of_path == "" %}/{% endunless %}">
+{% endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}/{{ site.default_language }}/{{ rest_of_path }}{% unless rest_of_path == "" %}/{% endunless %}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Arimo:wght@400;500;600&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="icon" href="data:,">

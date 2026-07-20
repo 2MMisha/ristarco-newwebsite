@@ -1,0 +1,29 @@
+{
+  "id": "summer-cup-2026",
+  "date": "2026-08-15",
+  "date_end": "2026-08-16",
+  "google_form_url": "https://forms.gle/REPLACE_WITH_YOUR_FORM",
+  "translations": {
+    "en": {
+      "name": "Summer Cup 2026",
+      "location": "Tel Aviv, Israel",
+      "description": "Our flagship summer competition, open to managers of all levels. Two days of qualifying rounds and finals.",
+      "sponsors": ["Sponsor name goes here", "Second sponsor goes here"],
+      "regulations": "Full participation rules and eligibility requirements go here — age categories, entry requirements, code of conduct, etc."
+    },
+    "he": {
+      "name": "קאפ הקיץ 2026",
+      "location": "תל אביב, ישראל",
+      "description": "התחרות הדגל של הקיץ שלנו, פתוחה למנהלים בכל הרמות. יומיים של סבבי הדחה וגמר.",
+      "sponsors": ["שם נותן חסות ראשון", "שם נותן חסות שני"],
+      "regulations": "כאן יופיעו תקנון ההשתתפות המלא ותנאי הזכאות — קטגוריות גיל, תנאי הרשמה, קוד התנהגות וכו׳."
+    },
+    "ru": {
+      "name": "Летний Кубок 2026",
+      "location": "Тель-Авив, Израиль",
+      "description": "Наше главное летнее соревнование, открытое для менеджеров любого уровня. Два дня отборочных раундов и финалов.",
+      "sponsors": ["Название спонсора", "Название второго спонсора"],
+      "regulations": "Здесь размещаются полные правила участия и требования — возрастные категории, условия регистрации, кодекс поведения и т.д."
+    }
+  }
+}

@@ -1,0 +1,61 @@
+---
+layout: default
+---
+{% assign base = "/" | append: page.lang | append: "/events/" | append: page.event.id | append: "/" | relative_url %}
+
+<article class="wrap event-page">
+  <p class="event-page__crumb"><a href="{{ '/' | append: page.lang | append: '/events/' | relative_url }}">{{ site.data.ui[page.lang].nav_events }}</a></p>
+  <h1>{{ page.t.name }}</h1>
+
+  <div class="event-page__meta">
+    <span><strong>{{ site.data.ui[page.lang].date }}:</strong> {{ page.event.date }}{% if page.event.date_end and page.event.date_end != page.event.date %}–{{ page.event.date_end }}{% endif %}</span>
+    <span><strong>{{ site.data.ui[page.lang].location }}:</strong> {{ page.t.location }}</span>
+  </div>
+
+  <nav class="event-page__tabs">
+    <a href="{{ base }}" {% if page.page_type == "overview" %}class="is-active"{% endif %}>{{ site.data.ui[page.lang].nav_events }}</a>
+    <a href="{{ base }}registration/" {% if page.page_type == "registration" %}class="is-active"{% endif %}>{{ site.data.ui[page.lang].register }}</a>
+    <a href="{{ base }}schedule/" {% if page.page_type == "schedule" %}class="is-active"{% endif %}>{{ site.data.ui[page.lang].schedule }}</a>
+    <a href="{{ base }}results/" {% if page.page_type == "results" %}class="is-active"{% endif %}>{{ site.data.ui[page.lang].results }}</a>
+  </nav>
+
+  {% if page.page_type == "overview" %}
+    <p class="event-page__description">{{ page.t.description }}</p>
+
+    {% if page.t.sponsors and page.t.sponsors.size > 0 %}
+    <h2>{{ site.data.ui[page.lang].sponsors }}</h2>
+    <ul class="event-page__sponsors">
+      {% for s in page.t.sponsors %}<li>{{ s }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if page.t.regulations %}
+    <h2>{{ site.data.ui[page.lang].regulations }}</h2>
+    <p>{{ page.t.regulations }}</p>
+    {% endif %}
+
+    <a class="btn btn--accent" href="{{ base }}registration/">{{ site.data.ui[page.lang].register_cta }}</a>
+
+  {% elsif page.page_type == "registration" %}
+    {% if page.event.google_form_url and page.event.google_form_url != "" %}
+      <div class="form-embed">
+        <iframe src="{{ page.event.google_form_url }}" width="100%" height="900" frameborder="0">Loading form…</iframe>
+      </div>
+      <p><a class="btn" href="{{ page.event.google_form_url }}" target="_blank" rel="noopener">{{ site.data.ui[page.lang].register_cta }} ↗</a></p>
+    {% else %}
+      <p>{{ site.data.ui[page.lang].register }} — {{ site.data.ui[page.lang].results_pending }}</p>
+    {% endif %}
+
+  {% elsif page.page_type == "schedule" %}
+    {% if page.t.schedule %}
+      <div>{{ page.t.schedule }}</div>
+    {% else %}
+      <p class="empty-state">{{ site.data.ui[page.lang].schedule_pending }}</p>
+    {% endif %}
+
+  {% elsif page.page_type == "results" %}
+    {% assign results_url = "/results/" | append: page.event.id | append: "/" | relative_url %}
+    <p class="empty-state">{{ site.data.ui[page.lang].results_folder_note }}</p>
+    <p><a class="btn btn--accent" href="{{ results_url }}">{{ site.data.ui[page.lang].results }} ↗</a></p>
+  {% endif %}
+</article>

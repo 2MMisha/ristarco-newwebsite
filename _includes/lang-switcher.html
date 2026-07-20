@@ -1,0 +1,12 @@
+<div class="lang-switcher">
+  {% assign this_path = page.url | remove_first: "/" %}
+  {% assign path_parts = this_path | split: "/" %}
+  {% assign rest_of_path = path_parts | slice: 1, 99 | join: "/" %}
+  {% for lang in site.languages %}
+    <a
+      href="{{ '/' | append: lang | append: '/' | append: rest_of_path | relative_url }}{% unless rest_of_path == "" %}/{% endunless %}"
+      class="lang-switcher__link{% if lang == page.lang %} is-active{% endif %}"
+      lang="{{ lang }}"
+    >{{ site.lang_names[lang] }}</a>
+  {% endfor %}
+</div>

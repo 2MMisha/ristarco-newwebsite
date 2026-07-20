@@ -1,0 +1,10 @@
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div class="site-footer__brand">{{ site.org.short_name }} — {{ site.org.name }}</div>
+    <div class="site-footer__contact">
+      {% if site.org.email %}<a href="mailto:{{ site.org.email }}">{{ site.org.email }}</a>{% endif %}
+      {% if site.org.phone and site.org.phone != "" %}<span>{{ site.org.phone }}</span>{% endif %}
+    </div>
+    <div class="site-footer__legal">© {{ site.time | date: "%Y" }} {{ site.org.short_name }}. {{ site.data.ui[page.lang].footer_rights }}</div>
+  </div>
+</footer>

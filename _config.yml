@@ -1,0 +1,43 @@
+title: Rising Star Manager
+short_name: RSM
+url: "https://ristar.co"
+baseurl: ""
+
+# Languages this site is built in. Order matters only for the language switcher.
+languages: ["en", "he", "ru"]
+default_language: "en"
+
+lang_names:
+  en: "English"
+  he: "עברית"
+  ru: "Русский"
+
+lang_dirs:
+  en: "ltr"
+  he: "rtl"
+  ru: "ltr"
+
+# Contact/org details used across templates. Edit these directly — no code changes needed.
+org:
+  name: "Rising Star Manager"
+  short_name: "RSM"
+  email: "info@ristar.co"
+  phone: ""
+  address: ""
+  social:
+    instagram: ""
+    facebook: ""
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+sass:
+  style: compressed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

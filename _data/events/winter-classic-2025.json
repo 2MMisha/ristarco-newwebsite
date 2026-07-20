@@ -1,0 +1,29 @@
+{
+  "id": "winter-classic-2025",
+  "date": "2025-01-20",
+  "date_end": "2025-01-21",
+  "google_form_url": "https://forms.gle/REPLACE_WITH_YOUR_FORM",
+  "translations": {
+    "en": {
+      "name": "Winter Classic 2025",
+      "location": "Jerusalem, Israel",
+      "description": "Our first competition of 2025, featuring qualifiers and a finals day.",
+      "sponsors": ["Sponsor name goes here", "Second sponsor goes here"],
+      "regulations": "Full participation rules and eligibility requirements go here."
+    },
+    "he": {
+      "name": "קלאסיק החורף 2025",
+      "location": "ירושלים, ישראל",
+      "description": "התחרות הראשונה שלנו ב-2025, כללה סבבי הדחה ויום גמר.",
+      "sponsors": ["שם נותן חסות ראשון", "שם נותן חסות שני"],
+      "regulations": "כאן יופיעו תקנון ההשתתפות המלא ותנאי הזכאות."
+    },
+    "ru": {
+      "name": "Зимняя Классика 2025",
+      "location": "Иерусалим, Израиль",
+      "description": "Наше первое соревнование 2025 года: отборочные раунды и день финалов.",
+      "sponsors": ["Название спонсора", "Название второго спонсора"],
+      "regulations": "Здесь размещаются полные правила участия и требования."
+    }
+  }
+}

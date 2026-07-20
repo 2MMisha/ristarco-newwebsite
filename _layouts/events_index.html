@@ -1,0 +1,42 @@
+---
+layout: default
+---
+{% assign today = "now" | date: "%Y-%m-%d" %}
+{% assign upcoming = page.events | where_exp: "event", "event.date >= today" %}
+{% assign past = page.events | where_exp: "event", "event.date < today" %}
+
+<div class="wrap events-index">
+  <h1>{{ page.title }}</h1>
+
+  <h2>{{ site.data.ui[page.lang].upcoming }}</h2>
+  {% if upcoming.size > 0 %}
+    <div class="event-cards">
+      {% for event in upcoming %}
+        {% assign t = event.translations[page.lang] %}
+        <a class="event-card" href="{{ '/' | append: page.lang | append: '/events/' | append: event.id | append: '/' | relative_url }}">
+          <span class="event-card__date">{{ event.date }}</span>
+          <span class="event-card__name">{{ t.name }}</span>
+          <span class="event-card__location">{{ t.location }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="empty-state">{{ site.data.ui[page.lang].no_upcoming }}</p>
+  {% endif %}
+
+  <h2>{{ site.data.ui[page.lang].past }}</h2>
+  {% if past.size > 0 %}
+    <div class="event-cards">
+      {% for event in past %}
+        {% assign t = event.translations[page.lang] %}
+        <a class="event-card event-card--past" href="{{ '/' | append: page.lang | append: '/events/' | append: event.id | append: '/' | relative_url }}">
+          <span class="event-card__date">{{ event.date }}</span>
+          <span class="event-card__name">{{ t.name }}</span>
+          <span class="event-card__location">{{ t.location }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="empty-state">{{ site.data.ui[page.lang].no_past }}</p>
+  {% endif %}
+</div>

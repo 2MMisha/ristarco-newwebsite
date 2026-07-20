@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="wrap hero__inner">
+    <svg class="hero__mark" viewBox="0 0 200 120" aria-hidden="true">
+      <polyline points="4,100 40,80 76,88 112,48 148,58 196,12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M196 12 L200 22 L210 23 L202 30 L204 40 L196 35 L188 40 L190 30 L182 23 L192 22 Z" fill="currentColor"/>
+    </svg>
+    <h1 class="hero__title">{{ site.data.ui[page.lang].hero_title }}</h1>
+    <p class="hero__subtitle">{{ site.data.ui[page.lang].hero_subtitle }}</p>
+    <a class="btn btn--accent" href="{{ '/' | append: page.lang | append: '/events/' | relative_url }}">{{ site.data.ui[page.lang].hero_cta }}</a>
+  </div>
+</section>
+
+<section class="teaser">
+  <div class="wrap teaser__inner">
+    <h2>{{ site.data.ui[page.lang].about_teaser_title }}</h2>
+    <p>{{ site.data.ui[page.lang].about_teaser_body }}</p>
+    <a class="link-arrow" href="{{ '/' | append: page.lang | append: '/about/' | relative_url }}">{{ site.data.ui[page.lang].about_teaser_cta }} →</a>
+  </div>
+</section>
+
+<section class="teaser teaser--accent">
+  <div class="wrap teaser__inner">
+    <span class="badge">{{ site.data.ui[page.lang].product_badge }}</span>
+    <h2>{{ site.data.ui[page.lang].product_title }}</h2>
+    <p>{{ site.data.ui[page.lang].product_body }}</p>
+  </div>
+</section>
+
+<section class="teaser">
+  <div class="wrap teaser__inner">
+    <h2>{{ site.data.ui[page.lang].contact_teaser_title }}</h2>
+    <a class="link-arrow" href="{{ '/' | append: page.lang | append: '/contact/' | relative_url }}">{{ site.data.ui[page.lang].contact_teaser_cta }} →</a>
+  </div>
+</section>

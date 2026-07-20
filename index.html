@@ -1,0 +1,31 @@
+---
+permalink: /
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url={{ '/en/' | relative_url }}">
+  <title>Rising Star Manager</title>
+  <script>
+    (function () {
+      var supported = ["en", "he", "ru"];
+      var langs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || navigator.userLanguage || "en"];
+      var target = "en";
+      for (var i = 0; i < langs.length; i++) {
+        var code = (langs[i] || "").slice(0, 2).toLowerCase();
+        if (supported.indexOf(code) !== -1) { target = code; break; }
+      }
+      window.location.replace("{{ '/' | relative_url }}" + target + "/");
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting… / מפנה… / Перенаправление…
+    <a href="{{ '/en/' | relative_url }}">English</a> ·
+    <a href="{{ '/he/' | relative_url }}">עברית</a> ·
+    <a href="{{ '/ru/' | relative_url }}">Русский</a>
+  </p>
+</body>
+</html>

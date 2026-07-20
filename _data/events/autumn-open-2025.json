@@ -1,0 +1,29 @@
+{
+  "id": "autumn-open-2025",
+  "date": "2025-10-10",
+  "date_end": "2025-10-10",
+  "google_form_url": "https://forms.gle/REPLACE_WITH_YOUR_FORM",
+  "translations": {
+    "en": {
+      "name": "Autumn Open 2025",
+      "location": "Haifa, Israel",
+      "description": "A single-day open competition with category-based brackets, concluded October 2025.",
+      "sponsors": ["Sponsor name goes here"],
+      "regulations": "Full participation rules and eligibility requirements go here."
+    },
+    "he": {
+      "name": "האופן של הסתיו 2025",
+      "location": "חיפה, ישראל",
+      "description": "תחרות פתוחה בת יום אחד עם הדחה לפי קטגוריות, הסתיימה באוקטובר 2025.",
+      "sponsors": ["שם נותן חסות"],
+      "regulations": "כאן יופיעו תקנון ההשתתפות המלא ותנאי הזכאות."
+    },
+    "ru": {
+      "name": "Осенний Опен 2025",
+      "location": "Хайфа, Израиль",
+      "description": "Однодневное открытое соревнование с сеткой по категориям, завершилось в октябре 2025.",
+      "sponsors": ["Название спонсора"],
+      "regulations": "Здесь размещаются полные правила участия и требования."
+    }
+  }
+}
