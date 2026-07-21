@@ -524,12 +524,15 @@ body.js-anim-ready .reveal.is-visible {
 }
 .site-footer__legal-links a:hover { color: var(--rsm-white); text-decoration: underline; }
 .site-footer__legal {
-  width: 100%;
   opacity: 0.6;
   font-size: 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
 }
-.site-footer__by2m { display: block; opacity: 0.9; }
+.site-footer__by2m {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
+}
+.site-footer__by2m:hover,
+.site-footer__by2m:focus-visible { opacity: 1; }
+.site-footer__by2m img { display: block; }

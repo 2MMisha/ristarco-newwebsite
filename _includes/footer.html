@@ -11,7 +11,9 @@
     </nav>
     <div class="site-footer__legal">
       <span>© {{ site.time | date: "%Y" }} {{ site.org.short_name }}. {{ site.data.ui[page.lang].footer_rights }}</span>
-      <img class="site-footer__by2m" src="{{ '/assets/img/by2m.svg' | relative_url }}" alt="2M Media" height="16">
     </div>
+    <a class="site-footer__by2m" href="https://2mmedia.co" target="_blank" rel="noopener" aria-label="2M Media">
+      <img src="{{ '/assets/img/by2m.svg' | relative_url }}" alt="2M Media" height="16">
+    </a>
   </div>
 </footer>
