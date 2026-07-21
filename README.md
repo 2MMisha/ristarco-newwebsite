@@ -188,6 +188,39 @@ A few things that would strengthen the site as it grows, in rough order of impac
   anywhere. No third-party service, so no monthly cost and no external
   script loading on your site.
 
+## 12. Accessibility widget: TabNav
+
+Replaced the earlier self-built widget with the TabNav script, loaded on
+every page via `_layouts/default.html`. Its language and side (`right`
+normally, `left` for Hebrew) switch automatically per page — nothing to
+configure per-page. To change the color, size, or position, edit the
+`tnv-data-config` JSON directly in `_layouts/default.html`.
+
+## 13. Legal pages (law.ristar.co)
+
+The footer now links to `https://law.ristar.co/#privacy`, `#terms`, and
+`#accessibility` on every page (`_includes/footer.html`). If those anchor
+IDs on that site ever change, update the three URLs there.
+
+## 14. Logos
+
+- `assets/img/logo-LTR.svg` — used in the header for English and Russian.
+- `assets/img/logo-RTL.svg` — used in the header for Hebrew (icon/wordmark
+  order mirrored). The switch is automatic, based on the page's language.
+- `assets/img/by2m.svg` — the "by 2M Media" credit mark, shown in the footer
+  next to the copyright line.
+- `assets/img/icon-blue.svg` / `icon-white.svg` — standalone icon-only marks
+  (no wordmark) included for future use (e.g. social preview image) but not
+  currently wired into any template.
+
+## 15. Platform & Features (now two sections)
+
+The homepage now separates "the platform is coming soon" (short, badge +
+headline) from "what it does" — a dedicated Features section with an icon
+per feature (Registration, Event landing page, Scoring systems, Multiplatform)
+in `_layouts/home.html`. Copy lives in `_data/ui.yml` under `feature_*` and
+`features_title`.
+
 ## Project structure
 
 ```

@@ -9,8 +9,14 @@
 {{ content }}
 </main>
 {% include footer.html %}
-{% include a11y-widget.html %}
-<script src="{{ '/assets/js/a11y-widget.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/animations.js' | relative_url }}" defer></script>
+
+{% assign tnv_lang = "us-en" %}
+{% if page.lang == "he" %}{% assign tnv_lang = "he" %}{% endif %}
+{% if page.lang == "ru" %}{% assign tnv_lang = "ru" %}{% endif %}
+{% assign tnv_side = "right" %}
+{% if page.lang == "he" %}{% assign tnv_side = "left" %}{% endif %}
+<script src="https://widget.tabnav.com/limited-widget.min.js.gz?req=qpW9foMfxTXWGKBm8tUELM3lhjYtKw" tnv-data-config='{"language":"{{ tnv_lang }}","color":"#0d57ab","buttonColor":"#0d57ab","buttonSize":"small","widgetSize":"small","widgetLocation":"{{ tnv_side }}","buttonLocation":"bottom"}' defer></script>
+<noscript>JavaScript is required for <a href="https://tabnav.com/accessibility-widget">tabnav web accessibility widget</a> to work properly.</noscript>
 </body>
 </html>

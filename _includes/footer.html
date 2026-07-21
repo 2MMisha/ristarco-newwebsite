@@ -4,6 +4,14 @@
     <div class="site-footer__contact">
       {% include contact-links.html %}
     </div>
-    <div class="site-footer__legal">© {{ site.time | date: "%Y" }} {{ site.org.short_name }}. {{ site.data.ui[page.lang].footer_rights }}</div>
+    <nav class="site-footer__legal-links" aria-label="Legal">
+      <a href="https://law.ristar.co/#privacy" target="_blank" rel="noopener">{{ site.data.ui[page.lang].footer_privacy }}</a>
+      <a href="https://law.ristar.co/#terms" target="_blank" rel="noopener">{{ site.data.ui[page.lang].footer_terms }}</a>
+      <a href="https://law.ristar.co/#accessibility" target="_blank" rel="noopener">{{ site.data.ui[page.lang].footer_accessibility }}</a>
+    </nav>
+    <div class="site-footer__legal">
+      <span>© {{ site.time | date: "%Y" }} {{ site.org.short_name }}. {{ site.data.ui[page.lang].footer_rights }}</span>
+      <img class="site-footer__by2m" src="{{ '/assets/img/by2m.svg' | relative_url }}" alt="2M Media" height="16">
+    </div>
   </div>
 </footer>
