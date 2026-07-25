@@ -3,6 +3,7 @@ layout: page
 lang: en
 title: Contact
 permalink: /en/contact/
+description: "Get in touch with RSM about registration, sponsorship, or ordering our competition-management platform for your own event."
 ---
 
 Reach us directly, or send a message about registration, sponsorship, or ordering our platform for your own competition — we'll get back to you quickly.

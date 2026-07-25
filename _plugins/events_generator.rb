@@ -21,6 +21,14 @@ module Ristar
       self.data["ui"]         = ui
       self.data["title"]      = self.data["t"]["name"]
       self.data["permalink"]  = "/#{lang}/events/#{event['id']}/#{page_type == 'overview' ? '' : page_type + '/'}"
+
+      t = self.data["t"]
+      self.data["description"] = case page_type
+        when "overview"     then t["description"]
+        when "registration" then "#{ui['register']} — #{t['name']}, #{t['location']}, #{event['date']}."
+        when "schedule"     then "#{ui['schedule']} — #{t['name']}, #{t['location']}, #{event['date']}."
+        when "results"      then "#{ui['results']} — #{t['name']}, #{t['location']}, #{event['date']}."
+      end
     end
   end
 
@@ -40,12 +48,13 @@ module Ristar
       self.data["ui"]        = ui
       self.data["title"]     = ui["nav_events"]
       self.data["permalink"] = "/#{lang}/events/"
+      self.data["description"] = ui["gallery_meta_description"]
     end
   end
 
   class EventsGenerator < Jekyll::Generator
     safe true
-    priority :low
+    priority :high
 
     def generate(site)
       languages = site.config["languages"] || ["en"]

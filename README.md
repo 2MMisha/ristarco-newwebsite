@@ -221,6 +221,35 @@ per feature (Registration, Event landing page, Scoring systems, Multiplatform)
 in `_layouts/home.html`. Copy lives in `_data/ui.yml` under `feature_*` and
 `features_title`.
 
+## 16. SEO — what's fixed and what's still worth doing
+
+An audit turned up three real bugs, now fixed:
+
+- **Duplicate `<title>` tag** — the site had both a manual `<title>` and
+  `jekyll-seo-tag`'s own `<title>` output, which is invalid and confuses
+  crawlers. Fixed via `{% seo title=false %}`.
+- **No meta description anywhere** — `site.description` was never set, and
+  no page passed one to `{% seo %}`. Every page now has a real, distinct
+  description (site-wide fallback in `_config.yml`, and per-page overrides
+  via `description:` front matter or the generator for event pages).
+- **Generated pages were likely missing from `sitemap.xml`** — the event
+  and gallery pages are created by a custom plugin that was set to run
+  *after* `jekyll-sitemap`, so the sitemap was built before those pages
+  existed. Fixed by raising the plugin's priority so it runs first.
+
+Also added: `robots.txt` pointing at the sitemap, and a fuller, keyword-rich
+`<title>`/description specifically for the homepage in each language.
+
+**Still worth doing, when you're ready:**
+- A proper Open Graph image (1200×630 PNG) for social share previews — SVG
+  logos aren't reliably supported by Facebook/LinkedIn/Twitter link previews.
+- Real About/Contact copy — their meta descriptions are written, but the
+  visible page content is still placeholder text, and Google does weigh
+  actual page content, not just meta tags.
+- Once the domain is live and HTTPS is confirmed working, submit
+  `https://ristar.co/sitemap.xml` in Google Search Console (per README
+  section 10) — a correct sitemap doesn't help until it's actually submitted.
+
 ## Project structure
 
 ```

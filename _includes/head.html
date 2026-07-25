@@ -1,7 +1,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{% if page.layout == "home" %}
+<title>{{ page.title }}</title>
+{% else %}
 <title>{{ page.title }} · {{ site.org.short_name }}</title>
-{% seo %}
+{% endif %}
+{% seo title=false %}
 
 <!-- hreflang alternates so search engines index all three languages correctly -->
 {% assign this_path = page.url | remove_first: "/" %}

@@ -3,6 +3,7 @@ layout: page
 lang: en
 title: About Us
 permalink: /en/about/
+description: "RSM manages competitions end-to-end — registration, check-in, and results — built on our own platform."
 ---
 
 <!--

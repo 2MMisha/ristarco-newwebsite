@@ -3,6 +3,7 @@ layout: page
 lang: he
 title: אודות
 permalink: /he/about/
+description: "RSM מנהלת תחרויות מקצה לקצה — הרשמה, צ'ק אין ותוצאות — על גבי מערכת שפיתחנו בעצמנו."
 ---
 
 <!--

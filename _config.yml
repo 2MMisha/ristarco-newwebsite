@@ -2,6 +2,8 @@ title: Rising Star Manager
 short_name: RSM
 url: "https://ristar.co"
 baseurl: ""
+description: "RSM runs competitions from registration to final results — and the same platform behind it will soon be available for any organization to run theirs."
+logo: "/assets/img/icon-blue.svg"
 
 # Languages this site is built in. Order matters only for the language switcher.
 languages: ["en", "he", "ru"]
