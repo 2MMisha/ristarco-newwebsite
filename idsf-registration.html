@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IDSF | מערכת הרשמה לתחרויות</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;600;700;900&family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+  :root{
+    --bg: #FBF7F1;
+    --panel: #FFFFFF;
+    --panel-2: #FBF3E9;
+    --wine: #6B1E3C;
+    --wine-dark: #47142A;
+    --wine-tint: #F4E6EC;
+    --gold: #B8923A;
+    --gold-soft: #E7D6A6;
+    --ink: #2A231F;
+    --ink-soft: #6F6259;
+    --line: #E7DCC9;
+    --good: #3E7D58;
+    --good-tint: #E6F0E9;
+    --bad: #AE3A3A;
+    --bad-tint: #F6E7E7;
+    --radius: 14px;
+    --shadow: 0 4px 18px rgba(74, 30, 45, 0.08);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(1200px 400px at 15% -10%, var(--wine-tint), transparent 60%),
+      var(--bg);
+    color:var(--ink);
+    font-family:'Heebo', system-ui, sans-serif;
+    min-height:100vh;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:28px 20px 80px;}
+
+  /* header */
+  header.app-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:6px;}
+  .brand{display:flex;align-items:center;gap:14px;}
+  .brand-mark{
+    width:52px;height:52px;border-radius:50%;
+    background:linear-gradient(155deg, var(--wine), var(--wine-dark));
+    display:flex;align-items:center;justify-content:center;
+    box-shadow: var(--shadow);
+    flex-shrink:0;
+  }
+  .brand-mark svg{width:26px;height:26px;}
+  .brand h1{
+    font-family:'Frank Ruhl Libre', serif;
+    font-weight:700; font-size:26px; margin:0; color:var(--wine-dark);
+    letter-spacing:.2px;
+  }
+  .brand p{margin:2px 0 0; font-size:13px; color:var(--ink-soft); font-weight:500;}
+
+  .step-divider{
+    height:14px; margin:18px 0 22px; opacity:.9;
+    background-repeat:repeat-x; background-size:34px 14px;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='34' height='14'><path d='M2 12 Q9 2 17 7 T32 2' fill='none' stroke='%23B8923A' stroke-width='1.4' stroke-linecap='round' opacity='0.55'/></svg>");
+  }
+
+  /* tabs */
+  .tabs{display:flex; gap:6px; background:var(--panel-2); padding:5px; border-radius:999px; width:fit-content; margin:0 0 26px; border:1px solid var(--line);}
+  .tab-btn{
+    border:none; background:transparent; cursor:pointer;
+    padding:10px 20px; border-radius:999px; font-family:inherit;
+    font-size:14.5px; font-weight:600; color:var(--ink-soft);
+    transition:.18s ease;
+  }
+  .tab-btn.active{background:var(--wine); color:#fff; box-shadow:var(--shadow);}
+  .tab-btn:not(.active):hover{color:var(--wine-dark);}
+
+  .panel{
+    background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+    padding:26px 26px 28px; box-shadow:var(--shadow);
+    animation: fadeIn .25s ease;
+  }
+  @keyframes fadeIn{from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;}}
+
+  .panel h2{
+    font-family:'Frank Ruhl Libre', serif; font-size:21px; margin:0 0 4px; color:var(--wine-dark); font-weight:600;
+  }
+  .panel .sub{color:var(--ink-soft); font-size:13.5px; margin:0 0 22px;}
+
+  label{display:block; font-size:13px; font-weight:600; color:var(--ink); margin-bottom:6px;}
+  input[type=text], input[type=datetime-local], select{
+    width:100%; padding:10px 12px; border:1.5px solid var(--line); border-radius:10px;
+    font-family:inherit; font-size:14.5px; background:#fff; color:var(--ink);
+    transition:.15s;
+  }
+  input:focus, select:focus{outline:none; border-color:var(--wine); box-shadow:0 0 0 3px var(--wine-tint);}
+  .field{margin-bottom:16px;}
+  .row2{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  @media (max-width:640px){.row2{grid-template-columns:1fr;}}
+
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; cursor:pointer;
+    border:none; border-radius:10px; padding:11px 20px; font-family:inherit;
+    font-size:14.5px; font-weight:700; transition:.15s ease;
+  }
+  .btn-primary{background:var(--wine); color:#fff;}
+  .btn-primary:hover{background:var(--wine-dark); transform:translateY(-1px);}
+  .btn-gold{background:var(--gold); color:#fff;}
+  .btn-gold:hover{background:#9c7a2c; transform:translateY(-1px);}
+  .btn-ghost{background:transparent; color:var(--wine); border:1.5px solid var(--wine-tint);}
+  .btn-ghost:hover{background:var(--wine-tint);}
+  .btn-danger{background:var(--bad-tint); color:var(--bad);}
+  .btn-danger:hover{background:#f0d3d3;}
+  .btn-sm{padding:7px 13px; font-size:13px; border-radius:8px;}
+  .btn:disabled{opacity:.45; cursor:not-allowed; transform:none;}
+
+  .chips{display:flex; flex-wrap:wrap; gap:8px;}
+  .chip{
+    padding:8px 14px; border-radius:999px; border:1.5px solid var(--line);
+    background:#fff; font-size:13.5px; cursor:pointer; user-select:none; transition:.15s; font-weight:500;
+  }
+  .chip.on{background:var(--wine); border-color:var(--wine); color:#fff; font-weight:700;}
+  .chip:hover:not(.on){border-color:var(--gold);}
+
+  .hint{font-size:12.5px; color:var(--ink-soft); margin-top:6px;}
+  .divider{height:1px; background:var(--line); margin:24px 0;}
+
+  /* competition cards */
+  .comp-card{
+    border:1.5px solid var(--line); border-radius:12px; padding:16px 18px; margin-bottom:12px;
+    display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap;
+    background:#fff; transition:.15s;
+  }
+  .comp-card:hover{border-color:var(--gold-soft); box-shadow:var(--shadow);}
+  .comp-name{font-weight:700; font-size:15.5px; color:var(--wine-dark);}
+  .comp-meta{font-size:12.5px; color:var(--ink-soft); margin-top:4px; display:flex; gap:10px; flex-wrap:wrap;}
+  .badge{padding:3px 10px; border-radius:999px; font-size:11.5px; font-weight:700;}
+  .badge-open{background:var(--good-tint); color:var(--good);}
+  .badge-closed{background:var(--bad-tint); color:var(--bad);}
+  .cat-tag{display:inline-block; background:var(--panel-2); color:var(--wine-dark); border:1px solid var(--gold-soft); border-radius:999px; padding:2px 9px; font-size:11px; margin:2px 3px 0 0;}
+
+  .empty{
+    text-align:center; padding:34px 12px; color:var(--ink-soft); font-size:14px;
+    border:1.5px dashed var(--line); border-radius:12px; background:var(--panel-2);
+  }
+
+  .result-card{
+    border:1.5px solid var(--gold-soft); background:var(--panel-2); border-radius:12px;
+    padding:16px 18px; margin:14px 0 18px;
+  }
+  .result-card .name{font-weight:800; font-size:16.5px; color:var(--wine-dark);}
+  .result-card .meta-line{font-size:13.5px; color:var(--ink-soft); margin-top:3px;}
+  .kv{display:grid; grid-template-columns:auto 1fr; gap:4px 12px; margin-top:10px; font-size:13.5px;}
+  .kv b{color:var(--ink); font-weight:700;}
+
+  .toast{
+    position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(10px);
+    background:var(--wine-dark); color:#fff; padding:12px 22px; border-radius:999px;
+    font-size:13.5px; font-weight:600; box-shadow:0 8px 24px rgba(0,0,0,.2);
+    opacity:0; pointer-events:none; transition:.25s ease; z-index:50; max-width:90vw; text-align:center;
+  }
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+  .toast.err{background:var(--bad);}
+
+  table{width:100%; border-collapse:collapse; font-size:13.5px;}
+  th,td{padding:9px 10px; text-align:right; border-bottom:1px solid var(--line);}
+  th{color:var(--ink-soft); font-weight:700; font-size:12px; text-transform:none;}
+  tr:hover td{background:var(--panel-2);}
+
+  .admin-comp{border:1.5px solid var(--line); border-radius:12px; padding:16px 18px; margin-bottom:14px;}
+  .admin-comp-head{display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:10px;}
+  .count-pill{background:var(--wine-tint); color:var(--wine-dark); font-weight:700; font-size:12px; padding:3px 11px; border-radius:999px;}
+
+  .confirm-box{
+    border:1.5px solid var(--good); background:var(--good-tint); border-radius:12px; padding:18px; margin-top:16px;
+  }
+  .confirm-box h3{margin:0 0 6px; color:var(--good); font-size:16px; font-family:'Frank Ruhl Libre',serif;}
+  .token-box{
+    background:#fff; border:1.5px dashed var(--good); border-radius:10px; padding:10px 14px;
+    font-family:monospace; font-size:14px; margin-top:8px; display:flex; justify-content:space-between; align-items:center; gap:10px;
+  }
+  .footnote{font-size:12px; color:var(--ink-soft); margin-top:10px; line-height:1.6;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="app-head">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C10 2 8.5 3.5 8.5 5.5C8.5 7.5 10 9 12 9C14 9 15.5 7.5 15.5 5.5C15.5 3.5 14 2 12 2Z" fill="#E7D6A6"/>
+          <path d="M12 10C7 10 4 14 4 19C4 20 4.5 21 5.5 21C6.5 21 7 19.5 7.5 17.5C8 19.5 8.5 21 9.5 21C10.3 21 10.7 20.2 10.5 19.2L9.5 14L12 15.5L14.5 14L13.5 19.2C13.3 20.2 13.7 21 14.5 21C15.5 21 16 19.5 16.5 17.5C17 19.5 17.5 21 18.5 21C19.5 21 20 20 20 19C20 14 17 10 12 10Z" fill="#FDFBF7"/>
+        </svg>
+      </div>
+      <div>
+        <h1>IDSF · מערכת הרשמה לתחרויות</h1>
+        <p>הפדרציה הישראלית לספורט הריקוד — הרשמה, ניהול קטגוריות וייצוא נתונים</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="step-divider"></div>
+
+  <div class="tabs" id="tabs">
+    <button class="tab-btn active" data-tab="register">הרשמה לתחרות</button>
+    <button class="tab-btn" data-tab="organizer">אזור מארגן</button>
+    <button class="tab-btn" data-tab="admin">פדרציה — ניהול</button>
+  </div>
+
+  <!-- ============ TAB: REGISTER ============ -->
+  <section class="panel" id="tab-register">
+    <h2>הרשמה לתחרות</h2>
+    <p class="sub">בחרו תחרות, הקלידו שם או מספר ספורטאי, ובחרו קטגוריה. בן/בת הזוג ייטענו אוטומטית מה-CRM.</p>
+
+    <div class="field">
+      <label>תחרות</label>
+      <select id="reg-comp-select"></select>
+    </div>
+
+    <div id="reg-comp-info" class="hint" style="margin-bottom:14px;"></div>
+
+    <div class="row2">
+      <div class="field">
+        <label>שם או מספר ספורטאי</label>
+        <input type="text" id="athlete-query" placeholder="לדוגמה: נועה שגיא או 2202">
+      </div>
+      <div class="field" style="display:flex; align-items:flex-end;">
+        <button class="btn btn-primary" id="btn-search" style="width:100%; justify-content:center;">חיפוש בספורטאי</button>
+      </div>
+    </div>
+
+    <div id="search-result"></div>
+
+    <div class="divider"></div>
+    <p class="sub" style="margin-bottom:8px;">כבר נרשמתם? הזינו את קוד העריכה שקיבלתם באישור כדי לערוך או לבטל הרשמה.</p>
+    <div class="row2">
+      <div class="field">
+        <input type="text" id="edit-token-input" placeholder="קוד עריכה, לדוגמה: 8F2A-91XZ">
+      </div>
+      <div class="field" style="display:flex; align-items:flex-start;">
+        <button class="btn btn-ghost" id="btn-load-token">טעינת הרשמה</button>
+      </div>
+    </div>
+    <div id="edit-area"></div>
+  </section>
+
+  <!-- ============ TAB: ORGANIZER ============ -->
+  <section class="panel" id="tab-organizer" style="display:none;">
+    <h2>אזור מארגן תחרות</h2>
+    <p class="sub">כל מועדון יכול לפתוח כאן טופס הרשמה לתחרות חדשה ולבחור אילו קטגוריות פתוחות בה.</p>
+
+    <div class="field">
+      <label>שם המארגן / המועדון</label>
+      <input type="text" id="org-name" placeholder="לדוגמה: מועדון הראל">
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 style="font-size:17px;">פתיחת תחרות חדשה</h2>
+    <div class="field">
+      <label>שם התחרות</label>
+      <input type="text" id="comp-name" placeholder="לדוגמה: גביע הסתיו 2026">
+    </div>
+    <div class="field">
+      <label>מועד סגירת הרשמה</label>
+      <input type="datetime-local" id="comp-deadline">
+    </div>
+    <div class="field">
+      <label>קטגוריות פתוחות לתחרות</label>
+      <div class="chips" id="cat-chips"></div>
+      <p class="hint">רשימת הקטגוריות מגיעה מה-CRM של הפדרציה. סמנו את הקטגוריות הרלוונטיות לתחרות שלכם.</p>
+    </div>
+    <button class="btn btn-primary" id="btn-create-comp">פתיחת התחרות</button>
+
+    <div class="divider"></div>
+
+    <h2 style="font-size:17px;">התחרויות שלי</h2>
+    <div id="my-comps"></div>
+  </section>
+
+  <!-- ============ TAB: ADMIN ============ -->
+  <section class="panel" id="tab-admin" style="display:none;">
+    <h2>ניהול הפדרציה</h2>
+    <p class="sub">צפייה בכל התחרויות של כל המארגנים, וייצוא רשימת הנרשמים לכל תחרות כקובץ CSV או Excel.</p>
+    <div id="admin-list"></div>
+  </section>
+
+  <div class="toast" id="toast"></div>
+</div>
+
+<script>
+/* ---------------- Mock CRM data (stand-in until real API details are provided) ---------------- */
+const CRM_DATA = [
+  {id:'2201', name:'עידן לוי', partnerId:'2202', club:'מועדון הראל', baseCategory:'נוער לטיני D'},
+  {id:'2202', name:'נועה שגיא', partnerId:'2201', club:'מועדון הראל', baseCategory:'נוער לטיני D'},
+  {id:'2203', name:'איתי בר', partnerId:'2204', club:'רון דאנס', baseCategory:'בוגרים סטנדרטי C'},
+  {id:'2204', name:'שירה כץ', partnerId:'2203', club:'רון דאנס', baseCategory:'בוגרים סטנדרטי C'},
+  {id:'2205', name:'יונתן אברהם', partnerId:'2206', club:'סטודיו ריקוד+', baseCategory:'בוגרים לטיני A'},
+  {id:'2206', name:'מאיה פרידמן', partnerId:'2205', club:'סטודיו ריקוד+', baseCategory:'בוגרים לטיני A'},
+  {id:'2207', name:'תומר וקנין', partnerId:'2208', club:'מועדון הראל', baseCategory:'ילדים 2 סטנדרטי'},
+  {id:'2208', name:'רוני אזולאי', partnerId:'2207', club:'מועדון הראל', baseCategory:'ילדים 2 סטנדרטי'},
+  {id:'2209', name:'עומר גולן', partnerId:null, club:'רון דאנס', baseCategory:'פתוח - בוגרים'},
+  {id:'2210', name:'ליהי שני', partnerId:null, club:'סטודיו ריקוד+', baseCategory:'פתוח - בוגרים'},
+];
+const MASTER_CATEGORIES = [
+  'ילדים 1 סטנדרטי','ילדים 2 סטנדרטי','ילדים 1 לטיני','ילדים 2 לטיני',
+  'נוער לטיני D','נוער סטנדרטי D','בוגרים סטנדרטי C','בוגרים לטיני A',
+  'בוגרים סטנדרטי A','פתוח - בוגרים'
+];
+
+let competitions = [];
+let registrations = [];
+let selectedCats = new Set();
+
+/* ---------------- Storage helpers ---------------- */
+async function loadState(){
+  try{
+    const c = await window.storage.get('competitions', true);
+    competitions = c ? JSON.parse(c.value) : [];
+  }catch(e){ competitions = []; }
+  try{
+    const r = await window.storage.get('registrations', true);
+    registrations = r ? JSON.parse(r.value) : [];
+  }catch(e){ registrations = []; }
+
+  if(competitions.length === 0){
+    const seedDeadline = new Date(Date.now() + 1000*60*60*24*21).toISOString().slice(0,16);
+    competitions.push({
+      id: 'demo-comp-1',
+      name: 'גביע הפתיחה — סתיו 2026',
+      organizer: 'מועדון הראל',
+      categories: ['נוער לטיני D','בוגרים סטנדרטי C','בוגרים לטיני A','ילדים 2 סטנדרטי'],
+      deadline: seedDeadline,
+      createdAt: Date.now()
+    });
+    await saveCompetitions();
+  }
+}
+async function saveCompetitions(){
+  try{ await window.storage.set('competitions', JSON.stringify(competitions), true); }
+  catch(e){ showToast('שגיאה בשמירת הנתונים', true); }
+}
+async function saveRegistrations(){
+  try{ await window.storage.set('registrations', JSON.stringify(registrations), true); }
+  catch(e){ showToast('שגיאה בשמירת ההרשמה', true); }
+}
+
+/* ---------------- Utils ---------------- */
+function showToast(msg, isErr){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show' + (isErr ? ' err' : '');
+  setTimeout(()=> t.className = 'toast', 2400);
+}
+function genToken(){
+  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  let s = '';
+  for(let i=0;i<8;i++){ s += chars[Math.floor(Math.random()*chars.length)]; if(i===3) s+='-'; }
+  return s;
+}
+function isOpen(comp){ return new Date(comp.deadline).getTime() > Date.now(); }
+function fmtDate(iso){
+  const d = new Date(iso);
+  return d.toLocaleString('he-IL', {day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit'});
+}
+function findAthlete(query){
+  const q = query.trim().toLowerCase();
+  if(!q) return null;
+  return CRM_DATA.find(a => a.id === q.trim()) ||
+         CRM_DATA.find(a => a.name.toLowerCase().includes(q));
+}
+
+/* ---------------- Tabs ---------------- */
+document.getElementById('tabs').addEventListener('click', (e)=>{
+  const btn = e.target.closest('.tab-btn');
+  if(!btn) return;
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  ['register','organizer','admin'].forEach(name=>{
+    document.getElementById('tab-'+name).style.display = (name===btn.dataset.tab) ? 'block' : 'none';
+  });
+  if(btn.dataset.tab === 'admin') renderAdmin();
+  if(btn.dataset.tab === 'organizer') renderMyComps();
+});
+
+/* ---------------- Register tab ---------------- */
+function renderCompSelect(){
+  const sel = document.getElementById('reg-comp-select');
+  const openComps = competitions.filter(isOpen);
+  if(openComps.length === 0){
+    sel.innerHTML = '<option value="">אין תחרויות פתוחות כרגע</option>';
+    document.getElementById('reg-comp-info').textContent = '';
+    return;
+  }
+  sel.innerHTML = openComps.map(c=>`<option value="${c.id}">${c.name} — ${c.organizer}</option>`).join('');
+  updateCompInfo();
+}
+function updateCompInfo(){
+  const sel = document.getElementById('reg-comp-select');
+  const comp = competitions.find(c=>c.id===sel.value);
+  const info = document.getElementById('reg-comp-info');
+  if(!comp){ info.textContent=''; return; }
+  info.innerHTML = `סגירת הרשמה: <b>${fmtDate(comp.deadline)}</b> &nbsp;·&nbsp; קטגוריות פתוחות: ` +
+    comp.categories.map(c=>`<span class="cat-tag">${c}</span>`).join('');
+}
+document.getElementById('reg-comp-select').addEventListener('change', updateCompInfo);
+
+document.getElementById('btn-search').addEventListener('click', ()=>{
+  const q = document.getElementById('athlete-query').value;
+  const athlete = findAthlete(q);
+  const box = document.getElementById('search-result');
+  const compId = document.getElementById('reg-comp-select').value;
+  const comp = competitions.find(c=>c.id===compId);
+
+  if(!comp){ showToast('בחרו תחרות פתוחה קודם', true); return; }
+  if(!athlete){
+    box.innerHTML = `<div class="empty">לא נמצא ספורטאי תואם. בדקו את השם/המספר ונסו שוב.</div>`;
+    return;
+  }
+  const partner = athlete.partnerId ? CRM_DATA.find(a=>a.id===athlete.partnerId) : null;
+  const catOptions = comp.categories.map(c=>
+    `<option value="${c}" ${c===athlete.baseCategory?'selected':''}>${c}</option>`
+  ).join('');
+
+  box.innerHTML = `
+    <div class="result-card">
+      <div class="name">${athlete.name} <span style="font-weight:400;color:var(--ink-soft);font-size:13px;">#${athlete.id}</span></div>
+      <div class="meta-line">מועדון: ${athlete.club}${partner ? ' · בן/בת זוג: '+partner.name+' (#'+partner.id+')' : ' · ללא בן/בת זוג רשום'}</div>
+      <div class="field" style="margin-top:14px;">
+        <label>קטגוריית הרשמה</label>
+        <select id="reg-category">${catOptions}</select>
+      </div>
+      <button class="btn btn-primary" id="btn-submit-reg">שליחת הרשמה</button>
+    </div>
+  `;
+  document.getElementById('btn-submit-reg').addEventListener('click', async ()=>{
+    const category = document.getElementById('reg-category').value;
+    const token = genToken();
+    const record = {
+      id: 'reg-' + Date.now(),
+      compId: comp.id,
+      compName: comp.name,
+      athleteId: athlete.id,
+      athleteName: athlete.name,
+      partnerId: partner ? partner.id : null,
+      partnerName: partner ? partner.name : null,
+      club: athlete.club,
+      category,
+      token,
+      createdAt: Date.now()
+    };
+    registrations.push(record);
+    await saveRegistrations();
+    box.innerHTML = `
+      <div class="confirm-box">
+        <h3>ההרשמה נקלטה בהצלחה</h3>
+        <div>${athlete.name}${partner ? ' ו-' + partner.name : ''} · ${comp.name} · ${category}</div>
+        <div class="token-box">
+          <span>קוד עריכה: <b>${token}</b></span>
+          <button class="btn btn-ghost btn-sm" onclick="navigator.clipboard.writeText('${token}'); showToast('הקוד הועתק')">העתקה</button>
+        </div>
+        <p class="footnote">בסביבת ייצור יישלח מייל אישור אוטומטי הכולל את הקוד הזה, יחד עם קישור ישיר לעריכה/מחיקה. כרגע, לצורך ההדגמה, הקוד מוצג כאן — שמרו אותו כדי לערוך או לבטל את ההרשמה בכרטיסייה "הרשמה לתחרות" למטה.</p>
+      </div>
+    `;
+    showToast('נשלח אישור הרשמה (הדמיה)');
+  });
+});
+
+document.getElementById('btn-load-token').addEventListener('click', ()=>{
+  const token = document.getElementById('edit-token-input').value.trim().toUpperCase();
+  const area = document.getElementById('edit-area');
+  const reg = registrations.find(r=>r.token === token);
+  if(!reg){
+    area.innerHTML = `<div class="empty">לא נמצאה הרשמה עם קוד זה.</div>`;
+    return;
+  }
+  const comp = competitions.find(c=>c.id===reg.compId);
+  const catOptions = (comp ? comp.categories : [reg.category]).map(c=>
+    `<option value="${c}" ${c===reg.category?'selected':''}>${c}</option>`
+  ).join('');
+  area.innerHTML = `
+    <div class="result-card">
+      <div class="name">${reg.athleteName}${reg.partnerName ? ' & ' + reg.partnerName : ''}</div>
+      <div class="meta-line">${reg.compName} · נרשם ב-${new Date(reg.createdAt).toLocaleDateString('he-IL')}</div>
+      <div class="field" style="margin-top:14px;">
+        <label>קטגוריה</label>
+        <select id="edit-category" ${comp && !isOpen(comp) ? 'disabled' : ''}>${catOptions}</select>
+      </div>
+      <div style="display:flex; gap:10px;">
+        <button class="btn btn-primary btn-sm" id="btn-save-edit" ${comp && !isOpen(comp) ? 'disabled' : ''}>עדכון קטגוריה</button>
+        <button class="btn btn-danger btn-sm" id="btn-delete-reg" ${comp && !isOpen(comp) ? 'disabled' : ''}>ביטול הרשמה</button>
+      </div>
+      ${comp && !isOpen(comp) ? '<p class="hint" style="color:var(--bad);">ההרשמה לתחרות זו נסגרה — לא ניתן לערוך.</p>' : ''}
+    </div>
+  `;
+  document.getElementById('btn-save-edit').addEventListener('click', async ()=>{
+    reg.category = document.getElementById('edit-category').value;
+    await saveRegistrations();
+    showToast('ההרשמה עודכנה');
+  });
+  document.getElementById('btn-delete-reg').addEventListener('click', async ()=>{
+    registrations = registrations.filter(r=>r.token !== token);
+    await saveRegistrations();
+    area.innerHTML = `<div class="empty">ההרשמה בוטלה.</div>`;
+    showToast('ההרשמה בוטלה');
+  });
+});
+
+/* ---------------- Organizer tab ---------------- */
+function renderCatChips(){
+  const box = document.getElementById('cat-chips');
+  box.innerHTML = MASTER_CATEGORIES.map(c=>
+    `<button type="button" class="chip" data-cat="${c}">${c}</button>`
+  ).join('');
+  box.querySelectorAll('.chip').forEach(chip=>{
+    chip.addEventListener('click', ()=>{
+      const c = chip.dataset.cat;
+      if(selectedCats.has(c)){ selectedCats.delete(c); chip.classList.remove('on'); }
+      else{ selectedCats.add(c); chip.classList.add('on'); }
+    });
+  });
+}
+document.getElementById('btn-create-comp').addEventListener('click', async ()=>{
+  const orgName = document.getElementById('org-name').value.trim();
+  const compName = document.getElementById('comp-name').value.trim();
+  const deadline = document.getElementById('comp-deadline').value;
+  if(!orgName){ showToast('נא להזין שם מארגן/מועדון', true); return; }
+  if(!compName){ showToast('נא להזין שם תחרות', true); return; }
+  if(!deadline){ showToast('נא לבחור מועד סגירת הרשמה', true); return; }
+  if(selectedCats.size === 0){ showToast('נא לבחור לפחות קטגוריה אחת', true); return; }
+
+  competitions.push({
+    id: 'comp-' + Date.now(),
+    name: compName,
+    organizer: orgName,
+    categories: Array.from(selectedCats),
+    deadline,
+    createdAt: Date.now()
+  });
+  await saveCompetitions();
+  document.getElementById('comp-name').value = '';
+  document.getElementById('comp-deadline').value = '';
+  selectedCats.clear();
+  renderCatChips();
+  renderMyComps();
+  showToast('התחרות נפתחה בהצלחה');
+});
+
+function renderMyComps(){
+  const orgName = document.getElementById('org-name').value.trim().toLowerCase();
+  const box = document.getElementById('my-comps');
+  const mine = competitions.filter(c => !orgName || c.organizer.toLowerCase().includes(orgName));
+  if(mine.length === 0){
+    box.innerHTML = `<div class="empty">הזינו שם מארגן/מועדון למעלה כדי לראות את התחרויות שלכם.</div>`;
+    return;
+  }
+  box.innerHTML = mine.map(c=>{
+    const count = registrations.filter(r=>r.compId===c.id).length;
+    const open = isOpen(c);
+    return `
+      <div class="comp-card">
+        <div>
+          <div class="comp-name">${c.name}</div>
+          <div class="comp-meta">
+            <span class="badge ${open?'badge-open':'badge-closed'}">${open?'פתוח':'סגור'}</span>
+            <span>סגירה: ${fmtDate(c.deadline)}</span>
+            <span>${count} נרשמים</span>
+          </div>
+          <div style="margin-top:6px;">${c.categories.map(cat=>`<span class="cat-tag">${cat}</span>`).join('')}</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+document.getElementById('org-name').addEventListener('input', renderMyComps);
+
+/* ---------------- Admin tab ---------------- */
+function exportCSV(comp){
+  const rows = registrations.filter(r=>r.compId===comp.id);
+  const header = ['שם ראשון/זוג', 'בן/בת זוג', 'מועדון', 'קטגוריה', 'מספר ספורטאי', 'תאריך הרשמה'];
+  const lines = [header.join(',')];
+  rows.forEach(r=>{
+    lines.push([
+      r.athleteName, r.partnerName || '', r.club, r.category, r.athleteId,
+      new Date(r.createdAt).toLocaleDateString('he-IL')
+    ].map(v => `"${String(v).replace(/"/g,'""')}"`).join(','));
+  });
+  const csv = '\uFEFF' + lines.join('\n');
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `${comp.name.replace(/[^\w\u0590-\u05FF]+/g,'_')}.csv`;
+  a.click();
+}
+function exportXLSX(comp){
+  const rows = registrations.filter(r=>r.compId===comp.id).map(r=>({
+    'שם': r.athleteName,
+    'בן/בת זוג': r.partnerName || '',
+    'מועדון': r.club,
+    'קטגוריה': r.category,
+    'מספר ספורטאי': r.athleteId,
+    'תאריך הרשמה': new Date(r.createdAt).toLocaleDateString('he-IL')
+  }));
+  const ws = XLSX.utils.json_to_sheet(rows);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'נרשמים');
+  XLSX.writeFile(wb, `${comp.name.replace(/[^\w\u0590-\u05FF]+/g,'_')}.xlsx`);
+}
+function renderAdmin(){
+  const box = document.getElementById('admin-list');
+  if(competitions.length === 0){
+    box.innerHTML = `<div class="empty">עדיין לא נפתחו תחרויות במערכת.</div>`;
+    return;
+  }
+  const sorted = [...competitions].sort((a,b)=>b.createdAt-a.createdAt);
+  box.innerHTML = sorted.map(c=>{
+    const rows = registrations.filter(r=>r.compId===c.id);
+    const open = isOpen(c);
+    const tableRows = rows.map(r=>`
+      <tr>
+        <td>${r.athleteName}</td>
+        <td>${r.partnerName || '—'}</td>
+        <td>${r.club}</td>
+        <td>${r.category}</td>
+      </tr>
+    `).join('');
+    return `
+      <div class="admin-comp">
+        <div class="admin-comp-head">
+          <div>
+            <div class="comp-name">${c.name}</div>
+            <div class="comp-meta">
+              <span class="badge ${open?'badge-open':'badge-closed'}">${open?'פתוח':'סגור'}</span>
+              <span>מארגן: ${c.organizer}</span>
+              <span>סגירה: ${fmtDate(c.deadline)}</span>
+              <span class="count-pill">${rows.length} נרשמים</span>
+            </div>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button class="btn btn-gold btn-sm" ${rows.length===0?'disabled':''} onclick='exportCSV(${JSON.stringify(c).replace(/'/g,"&apos;")})'>הורדת CSV</button>
+            <button class="btn btn-ghost btn-sm" ${rows.length===0?'disabled':''} onclick='exportXLSX(${JSON.stringify(c).replace(/'/g,"&apos;")})'>הורדת Excel</button>
+          </div>
+        </div>
+        ${rows.length === 0 ? '<p class="hint">אין עדיין נרשמים לתחרות זו.</p>' : `
+          <table>
+            <thead><tr><th>שם</th><th>בן/בת זוג</th><th>מועדון</th><th>קטגוריה</th></tr></thead>
+            <tbody>${tableRows}</tbody>
+          </table>
+        `}
+      </div>
+    `;
+  }).join('');
+}
+
+/* ---------------- Init ---------------- */
+(async function init(){
+  await loadState();
+  renderCompSelect();
+  renderCatChips();
+  renderMyComps();
+})();
+</script>
+</body>
+</html>
