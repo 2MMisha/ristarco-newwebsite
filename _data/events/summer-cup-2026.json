@@ -9,21 +9,24 @@
       "location": "Tel Aviv, Israel",
       "description": "Our flagship summer competition, open to managers of all levels. Two days of qualifying rounds and finals.",
       "sponsors": ["Sponsor name goes here", "Second sponsor goes here"],
-      "regulations": "Full participation rules and eligibility requirements go here — age categories, entry requirements, code of conduct, etc."
+      "regulations": "Full participation rules and eligibility requirements go here — age categories, entry requirements, code of conduct, etc.",
+      "schedule": "<ul><li><strong>Day 1, Aug 15</strong> — Check-in 08:00, Qualifying rounds 09:00–17:00</li><li><strong>Day 2, Aug 16</strong> — Finals 10:00, Awards ceremony 16:00</li></ul>"
     },
     "he": {
       "name": "קאפ הקיץ 2026",
       "location": "תל אביב, ישראל",
       "description": "התחרות הדגל של הקיץ שלנו, פתוחה למנהלים בכל הרמות. יומיים של סבבי הדחה וגמר.",
       "sponsors": ["שם נותן חסות ראשון", "שם נותן חסות שני"],
-      "regulations": "כאן יופיעו תקנון ההשתתפות המלא ותנאי הזכאות — קטגוריות גיל, תנאי הרשמה, קוד התנהגות וכו׳."
+      "regulations": "כאן יופיעו תקנון ההשתתפות המלא ותנאי הזכאות — קטגוריות גיל, תנאי הרשמה, קוד התנהגות וכו׳.",
+      "schedule": "<ul><li><strong>יום 1, 15.8</strong> — צ'ק אין 08:00, סבבי הדחה 09:00–17:00</li><li><strong>יום 2, 16.8</strong> — גמר 10:00, טקס פרסים 16:00</li></ul>"
     },
     "ru": {
       "name": "Летний Кубок 2026",
       "location": "Тель-Авив, Израиль",
       "description": "Наше главное летнее соревнование, открытое для менеджеров любого уровня. Два дня отборочных раундов и финалов.",
       "sponsors": ["Название спонсора", "Название второго спонсора"],
-      "regulations": "Здесь размещаются полные правила участия и требования — возрастные категории, условия регистрации, кодекс поведения и т.д."
+      "regulations": "Здесь размещаются полные правила участия и требования — возрастные категории, условия регистрации, кодекс поведения и т.д.",
+      "schedule": "<ul><li><strong>День 1, 15 авг.</strong> — Регистрация 08:00, Отборочные раунды 09:00–17:00</li><li><strong>День 2, 16 авг.</strong> — Финалы 10:00, Церемония награждения 16:00</li></ul>"
     }
   }
 }
