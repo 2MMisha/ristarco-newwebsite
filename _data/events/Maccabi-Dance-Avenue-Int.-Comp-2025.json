@@ -1,0 +1,29 @@
+{
+  "id": "maccabi-int-comp",
+  "date": "2025-11-15",
+  "date_end": "2025-11-17",
+  "google_form_url": "https://registration.ristar.co/MDA%24Internal%24Competition-2025/index.html",
+  "translations": {
+    "en": {
+      "name": "Maccabi Dance Avenue Int. Comp - 2025",
+      "location": "Petakh Tikva, Israel",
+      "description": "Maccabi Dance Avenue Int. Comp - 2025",
+      "sponsors": ["2M Media"],
+      "regulations": "Regulations are provided by WDSF and IDSF rules"
+    },
+    "he": {
+      "name": "Maccabi Dance Avenue Int. Comp - 2025",
+      "location": "פתח תקווה, ישראל",
+      "description": "Maccabi Dance Avenue Int. Comp - 2025",
+      "sponsors": ["2M Media"],
+      "regulations": "תקנון וכללים של התחרות מסופק ע׳׳י ארגוני WDSF ו-IDSF"
+    },
+    "ru": {
+      "name": "Maccabi Dance Avenue Int. Comp - 2025",
+      "location": "Петах Тиква, Израиль",
+      "description": "Maccabi Dance Avenue Int. Comp - 2025",
+      "sponsors": ["2M Media"],
+      "regulations": "Правила и регламент конкурса предрстваленны WDSF и IDSF"
+    }
+  }
+}
