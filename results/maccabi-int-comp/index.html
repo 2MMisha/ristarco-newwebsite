@@ -1,0 +1,5281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maccabi Dance Avenue Int. Comp - 2025 - Full Results</title>
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --secondary: #34a853;
+            --accent: #fbbc05;
+            --dark: #202124;
+            --light: #f8f9fa;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+        .logo-header {
+            text-align: center;
+            padding: 15px 0;
+            background: white;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .logo-header img {
+            height: 40px;
+        }
+        .logo-text {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 0 0 20px 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .date-badge {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .info-item {
+            padding: 15px;
+            border-left: 4px solid var(--accent);
+            background: var(--light);
+        }
+        .person-name {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .person-role {
+            color: var(--secondary);
+            font-size: 0.9em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .place-1 {
+            background-color: #fff9c4;
+            font-weight: bold;
+        }
+        .place-2 {
+            background-color: #e8f5e9;
+        }
+        .place-3 {
+            background-color: #e3f2fd;
+        }
+        .total {
+            font-weight: bold;
+        }
+        .judges-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .judges-list li {
+            background: var(--light);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        .general-comment {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid var(--accent);
+            margin: 25px 0;
+            font-style: italic;
+            line-height: 1.7;
+        }
+        .category-title {
+            color: var(--primary);
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        .judges-section, .participants-section {
+            margin-bottom: 30px;
+        }
+        .judges-list, .participants-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .judges-list li, .participants-list li {
+            padding: 8px 15px;
+            margin-bottom: 5px;
+            background: #f5f5f5;
+            border-left: 4px solid #1a73e8;
+        }
+        .club-group {
+            margin-bottom: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .club-group h4 {
+            margin-top: 0;
+            color: #1a73e8;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .dance-title {
+            color: var(--secondary);
+            margin: 25px 0 15px;
+        }
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .judge-specialty {
+            font-style: italic;
+            color: #666;
+            margin: 5px 0;
+        }
+        .judge-categories {
+            font-size: 0.9em;
+            color: #444;
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .count-badge {
+            background: var(--primary);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            .container {
+                padding: 10px;
+            }
+            header {
+                padding: 30px 0;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            th, td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo Header -->
+    <div class="logo-header">
+        <div class="container">
+            <div class="logo-text">Created with</div>
+            <img src="logo-b.png" alt="Ristar Logo">
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <h1>Maccabi Dance Avenue Int. Comp - 2025</h1>
+            <p>DanceSport Competition</p>
+            <div class="date-badge">November 15-17, 2024</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Competition Info -->
+        <div class="card">
+            <h2>Competition Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="person-name">Maccabi Dance Avenue</div>
+                    <div class="person-role">Organizer</div>
+                </div>
+                <div class="info-item">
+                    <div class="person-name">Maccabi Dance Avenue Studio, Petakh Tikva</div>
+                    <div class="person-role">Location</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Organizing Team -->
+        <div class="card">
+            <h2>Organizing Team</h2>
+            <div class="info-grid">
+                
+                <div class="info-item">
+                    <div class="person-name">2M Media Creative Agency</div>
+                    <div class="person-role">Scrutineer</div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="person-name">2M Media Creative Agency</div>
+                    <div class="person-role">DJ</div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- General Comment -->
+        
+        <div class="card">
+            <h2>Comments:</h2>
+            <div class="general-comment">
+                -
+            </div>
+        </div>
+        
+        
+        <!-- Judges and Participants Section -->
+        <div class="card">
+            <h2>Judges and Participants</h2>
+            
+            <!-- Judges Table -->
+            <div class="info-section">
+                <div class="section-header">
+                    <h3>Judges Panel</h3>
+                    <span class="count-badge">3 judges</span>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="30%">Name</th>
+                            <th width="25%">Specialty</th>
+                            <th width="45%">Categories</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td><strong>Shimriel Davidov</strong></td>
+                            <td>
+                                
+                                <span style="color: #999;">-</span>
+                                
+                            </td>
+                            <td>
+                                <div class="judge-categories">
+                                    
+                                        Youth Open - Quickstep Cup, 
+                                    
+                                        Youth Open - Jive Cup, 
+                                    
+                                        U21 Open - Pasodoble Cup, 
+                                    
+                                        Junior II - E class, 
+                                    
+                                        Juvenile I - E class, 
+                                    
+                                        Juvenile II - E class, 
+                                    
+                                        Adults Open - Foxtrot Cup, 
+                                    
+                                        Junior I - F class, 
+                                    
+                                        Juvenile I - F class
+                                    
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><strong>Evgenia Gromova</strong></td>
+                            <td>
+                                
+                                <span style="color: #999;">-</span>
+                                
+                            </td>
+                            <td>
+                                <div class="judge-categories">
+                                    
+                                        Youth Open - Quickstep Cup, 
+                                    
+                                        Youth Open - Jive Cup, 
+                                    
+                                        U21 Open - Pasodoble Cup, 
+                                    
+                                        Junior II - E class, 
+                                    
+                                        Juvenile I - E class, 
+                                    
+                                        Juvenile II - E class, 
+                                    
+                                        Adults Open - Foxtrot Cup, 
+                                    
+                                        Junior I - F class, 
+                                    
+                                        Juvenile I - F class
+                                    
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><strong>Boris Zaltsman</strong></td>
+                            <td>
+                                
+                                <span style="color: #999;">-</span>
+                                
+                            </td>
+                            <td>
+                                <div class="judge-categories">
+                                    
+                                        Youth Open - Quickstep Cup, 
+                                    
+                                        Youth Open - Jive Cup, 
+                                    
+                                        U21 Open - Pasodoble Cup, 
+                                    
+                                        Junior II - E class, 
+                                    
+                                        Juvenile I - E class, 
+                                    
+                                        Juvenile II - E class, 
+                                    
+                                        Adults Open - Foxtrot Cup, 
+                                    
+                                        Junior I - F class, 
+                                    
+                                        Juvenile I - F class
+                                    
+                                </div>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Participants by Club -->
+            <div class="info-section" style="margin-top: 30px;">
+                <div class="section-header">
+                    <h3>Participants by Club</h3>
+                    <span class="count-badge">3 clubs</span>
+                </div>
+                
+                
+                <div class="club-group">
+                    <h4>Maccabi Dance Avenue <span style="font-weight: normal;">(23 participants)</span></h4>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th width="15%">Number</th>
+                                <th width="35%">Name</th>
+                                <th width="50%">Categories</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>#1</td>
+                                <td><strong>Kim Benyaminov</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#2</td>
+                                <td><strong>Noa Moskovich</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#3</td>
+                                <td><strong>Ariela Pleshkov</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#4</td>
+                                <td><strong>Adel Plaich</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#5</td>
+                                <td><strong>Mia Knyazkevsky</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#6</td>
+                                <td><strong>Omer Samsonic</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#7</td>
+                                <td><strong>Diana Sverdlov</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#8</td>
+                                <td><strong>Polina Lifshits</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#9</td>
+                                <td><strong>Liel Shavit</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#10</td>
+                                <td><strong>Romy Koren</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#11</td>
+                                <td><strong>Daria Abramov</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#12</td>
+                                <td><strong>Ester Rozenfeld</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#13</td>
+                                <td><strong> Yael Rozenfeld</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#14</td>
+                                <td><strong>Gaya Bannych</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#15</td>
+                                <td><strong>Yuli Esti Goren</strong></td>
+                                <td>
+                                    
+                                        Juvenile II - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#16</td>
+                                <td><strong>Loren Lozansky</strong></td>
+                                <td>
+                                    
+                                        Juvenile II - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#17</td>
+                                <td><strong>Dina Rozenfeld</strong></td>
+                                <td>
+                                    
+                                        Juvenile II - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#18</td>
+                                <td><strong>Lia Turkeltaub</strong></td>
+                                <td>
+                                    
+                                        Juvenile II - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#19</td>
+                                <td><strong>Tommy Tanaka - Avigail Goldshmit</strong></td>
+                                <td>
+                                    
+                                        Adults Open - Foxtrot Cup
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#20</td>
+                                <td><strong>Timothy Smazhenko - Bar Kliger</strong></td>
+                                <td>
+                                    
+                                        Youth Open - Quickstep Cup
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#21</td>
+                                <td><strong>Yotam Marom - Lia Veronica Barash</strong></td>
+                                <td>
+                                    
+                                        Youth Open - Jive Cup
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#22</td>
+                                <td><strong>Noam Koresh - Liel Michaeli</strong></td>
+                                <td>
+                                    
+                                        U21 Open - Pasodoble Cup
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#23</td>
+                                <td><strong>Sol Adi</strong></td>
+                                <td>
+                                    
+                                        Junior II - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="club-group">
+                    <h4>Etude <span style="font-weight: normal;">(1 participants)</span></h4>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th width="15%">Number</th>
+                                <th width="35%">Name</th>
+                                <th width="50%">Categories</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>#24</td>
+                                <td><strong>Mikhail Mokrushov - Sofia Kempf</strong></td>
+                                <td>
+                                    
+                                        Youth Open - Quickstep Cup
+                                    
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="club-group">
+                    <h4>Primestep <span style="font-weight: normal;">(20 participants)</span></h4>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th width="15%">Number</th>
+                                <th width="35%">Name</th>
+                                <th width="50%">Categories</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>#25</td>
+                                <td><strong>Yali Stajero - Gabby Zvirin</strong></td>
+                                <td>
+                                    
+                                        Juvenile II - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#26</td>
+                                <td><strong>Alisa plotkin</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#27</td>
+                                <td><strong>Martin Vogman -Naomi Sarah Zaltsman</strong></td>
+                                <td>
+                                    
+                                        Juvenile II - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#28</td>
+                                <td><strong>Loren Briskman</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - F class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#29</td>
+                                <td><strong>Alexandra Danilovitch</strong></td>
+                                <td>
+                                    
+                                        Juvenile II - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#30</td>
+                                <td><strong>Amalia Zeltser</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - F class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#31</td>
+                                <td><strong>Vera Shuvalova</strong></td>
+                                <td>
+                                    
+                                        Junior I - F class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#32</td>
+                                <td><strong>Mia Komissarov</strong></td>
+                                <td>
+                                    
+                                        Juvenile II - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#33</td>
+                                <td><strong>Daniel Salatsky Michaela Fayer</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#34</td>
+                                <td><strong>Loren Firsov</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - F class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#35</td>
+                                <td><strong>Vanessa Holy</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - F class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#36</td>
+                                <td><strong>Stephanie Michael</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - F class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#37</td>
+                                <td><strong>Tina Shuster</strong></td>
+                                <td>
+                                    
+                                        Juvenile II - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#38</td>
+                                <td><strong>Liel Roizman</strong></td>
+                                <td>
+                                    
+                                        Juvenile II - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#39</td>
+                                <td><strong>Mariia Nosachova</strong></td>
+                                <td>
+                                    
+                                        Juvenile II - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#40</td>
+                                <td><strong>Milana Halevi</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#41</td>
+                                <td><strong>Milana Varshavsky</strong></td>
+                                <td>
+                                    
+                                        Juvenile II - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#42</td>
+                                <td><strong>Lian Milshtein</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - F class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#43</td>
+                                <td><strong>Michelle Boguslavsky</strong></td>
+                                <td>
+                                    
+                                        Juvenile I - F class
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#44</td>
+                                <td><strong>Odel Avigdor</strong></td>
+                                <td>
+                                    
+                                        Juvenile II - E class
+                                    
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Full Results -->
+        <div class="card">
+            <h2>Competition Results</h2>
+            
+            
+            <section>
+                <h3 class="category-title">Youth Open - Quickstep Cup (Skating System)</h3>
+                
+                <!-- Summary Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>Q</th>
+                            
+                            <th>Total (Sum of Places)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr class="place-1">
+                            <td>1</td>
+                            <td>24</td>
+                            <td>Mikhail Mokrushov - Sofia Kempf</td>
+                            <td>Etude</td>
+                            
+                            <td>
+                                
+                                    1
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    1
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-2">
+                            <td>2</td>
+                            <td>20</td>
+                            <td>Timothy Smazhenko - Bar Kliger</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2
+                                
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <!-- Judges List -->
+                <h4>Judges Panel</h4>
+                <ul class="judges-list">
+                    
+                    <li>Shimriel Davidov</li>
+                    
+                    <li>Evgenia Gromova</li>
+                    
+                    <li>Boris Zaltsman</li>
+                    
+                </ul>
+
+                <!-- Detailed Results by Dance -->
+                
+                <h4 class="dance-title">Detailed Results: Q</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>Shimriel Davidov</th>
+                            
+                            <th>Evgenia Gromova</th>
+                            
+                            <th>Boris Zaltsman</th>
+                            
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>24</td>
+                            <td>Mikhail Mokrushov - Sofia Kempf</td>
+                            <td>Etude</td>
+                            
+                            <td>
+                                
+                                    1
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    1
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    1
+                                
+                            </td>
+                            
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>20</td>
+                            <td>Timothy Smazhenko - Bar Kliger</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+            </section>
+            
+            <section>
+                <h3 class="category-title">Youth Open - Jive Cup (Skating System)</h3>
+                
+                <!-- Summary Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>J</th>
+                            
+                            <th>Total (Sum of Places)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr class="place-1">
+                            <td>1</td>
+                            <td>21</td>
+                            <td>Yotam Marom - Lia Veronica Barash</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    1
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    1
+                                
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <!-- Judges List -->
+                <h4>Judges Panel</h4>
+                <ul class="judges-list">
+                    
+                    <li>Shimriel Davidov</li>
+                    
+                    <li>Evgenia Gromova</li>
+                    
+                    <li>Boris Zaltsman</li>
+                    
+                </ul>
+
+                <!-- Detailed Results by Dance -->
+                
+                <h4 class="dance-title">Detailed Results: J</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>Shimriel Davidov</th>
+                            
+                            <th>Evgenia Gromova</th>
+                            
+                            <th>Boris Zaltsman</th>
+                            
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>21</td>
+                            <td>Yotam Marom - Lia Veronica Barash</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    1
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    1
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    1
+                                
+                            </td>
+                            
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+            </section>
+            
+            <section>
+                <h3 class="category-title">U21 Open - Pasodoble Cup (Skating System)</h3>
+                
+                <!-- Summary Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>P</th>
+                            
+                            <th>Total (Sum of Places)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr class="place-1">
+                            <td>1</td>
+                            <td>22</td>
+                            <td>Noam Koresh - Liel Michaeli</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    1
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    1
+                                
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <!-- Judges List -->
+                <h4>Judges Panel</h4>
+                <ul class="judges-list">
+                    
+                    <li>Shimriel Davidov</li>
+                    
+                    <li>Evgenia Gromova</li>
+                    
+                    <li>Boris Zaltsman</li>
+                    
+                </ul>
+
+                <!-- Detailed Results by Dance -->
+                
+                <h4 class="dance-title">Detailed Results: P</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>Shimriel Davidov</th>
+                            
+                            <th>Evgenia Gromova</th>
+                            
+                            <th>Boris Zaltsman</th>
+                            
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>22</td>
+                            <td>Noam Koresh - Liel Michaeli</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    1
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    1
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    1
+                                
+                            </td>
+                            
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+            </section>
+            
+            <section>
+                <h3 class="category-title">Junior II - E class (Mass System)</h3>
+                
+                <!-- Summary Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>VW</th>
+                            
+                            <th>S</th>
+                            
+                            <th>Total (Avg)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr class="place-1">
+                            <td>1</td>
+                            <td>23</td>
+                            <td>Sol Adi</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.67
+                                
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <!-- Judges List -->
+                <h4>Judges Panel</h4>
+                <ul class="judges-list">
+                    
+                    <li>Shimriel Davidov</li>
+                    
+                    <li>Evgenia Gromova</li>
+                    
+                    <li>Boris Zaltsman</li>
+                    
+                </ul>
+
+                <!-- Detailed Results by Dance -->
+                
+                <h4 class="dance-title">Detailed Results: VW</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>Shimriel Davidov</th>
+                            
+                            <th>Evgenia Gromova</th>
+                            
+                            <th>Boris Zaltsman</th>
+                            
+                            
+                            <th>Average</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>23</td>
+                            <td>Sol Adi</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                <h4 class="dance-title">Detailed Results: S</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>Shimriel Davidov</th>
+                            
+                            <th>Evgenia Gromova</th>
+                            
+                            <th>Boris Zaltsman</th>
+                            
+                            
+                            <th>Average</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>23</td>
+                            <td>Sol Adi</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+            </section>
+            
+            <section>
+                <h3 class="category-title">Juvenile I - E class (Mass System)</h3>
+                
+                <!-- Summary Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>VW</th>
+                            
+                            <th>S</th>
+                            
+                            <th>Total (Avg)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr class="place-1">
+                            <td>1</td>
+                            <td>4</td>
+                            <td>Adel Plaich</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    3.00
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-2">
+                            <td>2</td>
+                            <td>6</td>
+                            <td>Omer Samsonic</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    3.00
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-3">
+                            <td>3</td>
+                            <td>8</td>
+                            <td>Polina Lifshits</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    3.00
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-4">
+                            <td>4</td>
+                            <td>40</td>
+                            <td>Milana Halevi</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.83
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-5">
+                            <td>5</td>
+                            <td>3</td>
+                            <td>Ariela Pleshkov</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.67
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-6">
+                            <td>6</td>
+                            <td>7</td>
+                            <td>Diana Sverdlov</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.67
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-7">
+                            <td>7</td>
+                            <td>10</td>
+                            <td>Romy Koren</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.67
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-8">
+                            <td>8</td>
+                            <td>11</td>
+                            <td>Daria Abramov</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.67
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-9">
+                            <td>9</td>
+                            <td>14</td>
+                            <td>Gaya Bannych</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.67
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-10">
+                            <td>10</td>
+                            <td>26</td>
+                            <td>Alisa plotkin</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.67
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-11">
+                            <td>11</td>
+                            <td>2</td>
+                            <td>Noa Moskovich</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.50
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-12">
+                            <td>12</td>
+                            <td>5</td>
+                            <td>Mia Knyazkevsky</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.50
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-13">
+                            <td>13</td>
+                            <td>12</td>
+                            <td>Ester Rozenfeld</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.50
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-14">
+                            <td>14</td>
+                            <td>13</td>
+                            <td> Yael Rozenfeld</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.50
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-15">
+                            <td>15</td>
+                            <td>33</td>
+                            <td>Daniel Salatsky Michaela Fayer</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.50
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-16">
+                            <td>16</td>
+                            <td>9</td>
+                            <td>Liel Shavit</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.33
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-17">
+                            <td>17</td>
+                            <td>1</td>
+                            <td>Kim Benyaminov</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2.00
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.17
+                                
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <!-- Judges List -->
+                <h4>Judges Panel</h4>
+                <ul class="judges-list">
+                    
+                    <li>Shimriel Davidov</li>
+                    
+                    <li>Evgenia Gromova</li>
+                    
+                    <li>Boris Zaltsman</li>
+                    
+                </ul>
+
+                <!-- Detailed Results by Dance -->
+                
+                <h4 class="dance-title">Detailed Results: VW</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>Shimriel Davidov</th>
+                            
+                            <th>Evgenia Gromova</th>
+                            
+                            <th>Boris Zaltsman</th>
+                            
+                            
+                            <th>Average</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>Adel Plaich</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>6</td>
+                            <td>Omer Samsonic</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>3</td>
+                            <td>8</td>
+                            <td>Polina Lifshits</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>4</td>
+                            <td>40</td>
+                            <td>Milana Halevi</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>5</td>
+                            <td>3</td>
+                            <td>Ariela Pleshkov</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>Diana Sverdlov</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>7</td>
+                            <td>10</td>
+                            <td>Romy Koren</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>8</td>
+                            <td>11</td>
+                            <td>Daria Abramov</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>9</td>
+                            <td>14</td>
+                            <td>Gaya Bannych</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>10</td>
+                            <td>26</td>
+                            <td>Alisa plotkin</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>11</td>
+                            <td>2</td>
+                            <td>Noa Moskovich</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>12</td>
+                            <td>5</td>
+                            <td>Mia Knyazkevsky</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>13</td>
+                            <td>12</td>
+                            <td>Ester Rozenfeld</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>14</td>
+                            <td>13</td>
+                            <td> Yael Rozenfeld</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>15</td>
+                            <td>33</td>
+                            <td>Daniel Salatsky Michaela Fayer</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>16</td>
+                            <td>9</td>
+                            <td>Liel Shavit</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>17</td>
+                            <td>1</td>
+                            <td>Kim Benyaminov</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.0</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                <h4 class="dance-title">Detailed Results: S</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>Shimriel Davidov</th>
+                            
+                            <th>Evgenia Gromova</th>
+                            
+                            <th>Boris Zaltsman</th>
+                            
+                            
+                            <th>Average</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>Adel Plaich</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>6</td>
+                            <td>Omer Samsonic</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>3</td>
+                            <td>8</td>
+                            <td>Polina Lifshits</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>4</td>
+                            <td>40</td>
+                            <td>Milana Halevi</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>5</td>
+                            <td>3</td>
+                            <td>Ariela Pleshkov</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>Diana Sverdlov</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>7</td>
+                            <td>10</td>
+                            <td>Romy Koren</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>8</td>
+                            <td>11</td>
+                            <td>Daria Abramov</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>9</td>
+                            <td>14</td>
+                            <td>Gaya Bannych</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>10</td>
+                            <td>26</td>
+                            <td>Alisa plotkin</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>11</td>
+                            <td>2</td>
+                            <td>Noa Moskovich</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>12</td>
+                            <td>5</td>
+                            <td>Mia Knyazkevsky</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>13</td>
+                            <td>12</td>
+                            <td>Ester Rozenfeld</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>14</td>
+                            <td>13</td>
+                            <td> Yael Rozenfeld</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>15</td>
+                            <td>33</td>
+                            <td>Daniel Salatsky Michaela Fayer</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>16</td>
+                            <td>9</td>
+                            <td>Liel Shavit</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>17</td>
+                            <td>1</td>
+                            <td>Kim Benyaminov</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+            </section>
+            
+            <section>
+                <h3 class="category-title">Juvenile II - E class (Mass System)</h3>
+                
+                <!-- Summary Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>VW</th>
+                            
+                            <th>S</th>
+                            
+                            <th>Total (Avg)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr class="place-1">
+                            <td>1</td>
+                            <td>32</td>
+                            <td>Mia Komissarov</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.83
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-2">
+                            <td>2</td>
+                            <td>37</td>
+                            <td>Tina Shuster</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.83
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-3">
+                            <td>3</td>
+                            <td>44</td>
+                            <td>Odel Avigdor</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.83
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-4">
+                            <td>4</td>
+                            <td>39</td>
+                            <td>Mariia Nosachova</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.67
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-5">
+                            <td>5</td>
+                            <td>15</td>
+                            <td>Yuli Esti Goren</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.50
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-6">
+                            <td>6</td>
+                            <td>16</td>
+                            <td>Loren Lozansky</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.50
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-7">
+                            <td>7</td>
+                            <td>17</td>
+                            <td>Dina Rozenfeld</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.00
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.50
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-8">
+                            <td>8</td>
+                            <td>18</td>
+                            <td>Lia Turkeltaub</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.00
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.50
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-9">
+                            <td>9</td>
+                            <td>25</td>
+                            <td>Yali Stajero - Gabby Zvirin</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.00
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.50
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-10">
+                            <td>10</td>
+                            <td>29</td>
+                            <td>Alexandra Danilovitch</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.50
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-11">
+                            <td>11</td>
+                            <td>41</td>
+                            <td>Milana Varshavsky</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.50
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-12">
+                            <td>12</td>
+                            <td>27</td>
+                            <td>Martin Vogman -Naomi Sarah Zaltsman</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.33
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-13">
+                            <td>13</td>
+                            <td>38</td>
+                            <td>Liel Roizman</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.33
+                                
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <!-- Judges List -->
+                <h4>Judges Panel</h4>
+                <ul class="judges-list">
+                    
+                    <li>Shimriel Davidov</li>
+                    
+                    <li>Evgenia Gromova</li>
+                    
+                    <li>Boris Zaltsman</li>
+                    
+                </ul>
+
+                <!-- Detailed Results by Dance -->
+                
+                <h4 class="dance-title">Detailed Results: VW</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>Shimriel Davidov</th>
+                            
+                            <th>Evgenia Gromova</th>
+                            
+                            <th>Boris Zaltsman</th>
+                            
+                            
+                            <th>Average</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>32</td>
+                            <td>Mia Komissarov</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>37</td>
+                            <td>Tina Shuster</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>3</td>
+                            <td>44</td>
+                            <td>Odel Avigdor</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>4</td>
+                            <td>39</td>
+                            <td>Mariia Nosachova</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>5</td>
+                            <td>15</td>
+                            <td>Yuli Esti Goren</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>6</td>
+                            <td>16</td>
+                            <td>Loren Lozansky</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>7</td>
+                            <td>17</td>
+                            <td>Dina Rozenfeld</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>8</td>
+                            <td>18</td>
+                            <td>Lia Turkeltaub</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>9</td>
+                            <td>25</td>
+                            <td>Yali Stajero - Gabby Zvirin</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>10</td>
+                            <td>29</td>
+                            <td>Alexandra Danilovitch</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>11</td>
+                            <td>41</td>
+                            <td>Milana Varshavsky</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>12</td>
+                            <td>27</td>
+                            <td>Martin Vogman -Naomi Sarah Zaltsman</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>13</td>
+                            <td>38</td>
+                            <td>Liel Roizman</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                <h4 class="dance-title">Detailed Results: S</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>Shimriel Davidov</th>
+                            
+                            <th>Evgenia Gromova</th>
+                            
+                            <th>Boris Zaltsman</th>
+                            
+                            
+                            <th>Average</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>32</td>
+                            <td>Mia Komissarov</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>37</td>
+                            <td>Tina Shuster</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>3</td>
+                            <td>44</td>
+                            <td>Odel Avigdor</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>4</td>
+                            <td>39</td>
+                            <td>Mariia Nosachova</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>5</td>
+                            <td>15</td>
+                            <td>Yuli Esti Goren</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>6</td>
+                            <td>16</td>
+                            <td>Loren Lozansky</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>7</td>
+                            <td>17</td>
+                            <td>Dina Rozenfeld</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>8</td>
+                            <td>18</td>
+                            <td>Lia Turkeltaub</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>9</td>
+                            <td>25</td>
+                            <td>Yali Stajero - Gabby Zvirin</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>10</td>
+                            <td>29</td>
+                            <td>Alexandra Danilovitch</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>11</td>
+                            <td>41</td>
+                            <td>Milana Varshavsky</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>12</td>
+                            <td>27</td>
+                            <td>Martin Vogman -Naomi Sarah Zaltsman</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>13</td>
+                            <td>38</td>
+                            <td>Liel Roizman</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+            </section>
+            
+            <section>
+                <h3 class="category-title">Adults Open - Foxtrot Cup (Skating System)</h3>
+                
+                <!-- Summary Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>F</th>
+                            
+                            <th>Total (Sum of Places)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr class="place-1">
+                            <td>1</td>
+                            <td>19</td>
+                            <td>Tommy Tanaka - Avigail Goldshmit</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    1
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    1
+                                
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <!-- Judges List -->
+                <h4>Judges Panel</h4>
+                <ul class="judges-list">
+                    
+                    <li>Shimriel Davidov</li>
+                    
+                    <li>Evgenia Gromova</li>
+                    
+                    <li>Boris Zaltsman</li>
+                    
+                </ul>
+
+                <!-- Detailed Results by Dance -->
+                
+                <h4 class="dance-title">Detailed Results: F</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>Shimriel Davidov</th>
+                            
+                            <th>Evgenia Gromova</th>
+                            
+                            <th>Boris Zaltsman</th>
+                            
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>19</td>
+                            <td>Tommy Tanaka - Avigail Goldshmit</td>
+                            <td>Maccabi Dance Avenue</td>
+                            
+                            <td>
+                                
+                                    1
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    1
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    1
+                                
+                            </td>
+                            
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+            </section>
+            
+            <section>
+                <h3 class="category-title">Junior I - F class (Mass System)</h3>
+                
+                <!-- Summary Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>VW</th>
+                            
+                            <th>S</th>
+                            
+                            <th>Total (Avg)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr class="place-1">
+                            <td>1</td>
+                            <td>31</td>
+                            <td>Vera Shuvalova</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.83
+                                
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <!-- Judges List -->
+                <h4>Judges Panel</h4>
+                <ul class="judges-list">
+                    
+                    <li>Shimriel Davidov</li>
+                    
+                    <li>Evgenia Gromova</li>
+                    
+                    <li>Boris Zaltsman</li>
+                    
+                </ul>
+
+                <!-- Detailed Results by Dance -->
+                
+                <h4 class="dance-title">Detailed Results: VW</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>Shimriel Davidov</th>
+                            
+                            <th>Evgenia Gromova</th>
+                            
+                            <th>Boris Zaltsman</th>
+                            
+                            
+                            <th>Average</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>31</td>
+                            <td>Vera Shuvalova</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                <h4 class="dance-title">Detailed Results: S</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>Shimriel Davidov</th>
+                            
+                            <th>Evgenia Gromova</th>
+                            
+                            <th>Boris Zaltsman</th>
+                            
+                            
+                            <th>Average</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>31</td>
+                            <td>Vera Shuvalova</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+            </section>
+            
+            <section>
+                <h3 class="category-title">Juvenile I - F class (Mass System)</h3>
+                
+                <!-- Summary Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>VW</th>
+                            
+                            <th>S</th>
+                            
+                            <th>Total (Avg)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr class="place-1">
+                            <td>1</td>
+                            <td>30</td>
+                            <td>Amalia Zeltser</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    3.00
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-2">
+                            <td>2</td>
+                            <td>42</td>
+                            <td>Lian Milshtein</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3.00
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.83
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-3">
+                            <td>3</td>
+                            <td>28</td>
+                            <td>Loren Briskman</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.67
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-4">
+                            <td>4</td>
+                            <td>34</td>
+                            <td>Loren Firsov</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.67
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-5">
+                            <td>5</td>
+                            <td>35</td>
+                            <td>Vanessa Holy</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.67
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-6">
+                            <td>6</td>
+                            <td>36</td>
+                            <td>Stephanie Michael</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2.33
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.50
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="place-7">
+                            <td>7</td>
+                            <td>43</td>
+                            <td>Michelle Boguslavsky</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2.67
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2.00
+                                
+                            </td>
+                            
+                            <td class="total">
+                                
+                                    2.33
+                                
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <!-- Judges List -->
+                <h4>Judges Panel</h4>
+                <ul class="judges-list">
+                    
+                    <li>Shimriel Davidov</li>
+                    
+                    <li>Evgenia Gromova</li>
+                    
+                    <li>Boris Zaltsman</li>
+                    
+                </ul>
+
+                <!-- Detailed Results by Dance -->
+                
+                <h4 class="dance-title">Detailed Results: VW</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>Shimriel Davidov</th>
+                            
+                            <th>Evgenia Gromova</th>
+                            
+                            <th>Boris Zaltsman</th>
+                            
+                            
+                            <th>Average</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>30</td>
+                            <td>Amalia Zeltser</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>42</td>
+                            <td>Lian Milshtein</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>3</td>
+                            <td>28</td>
+                            <td>Loren Briskman</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>4</td>
+                            <td>34</td>
+                            <td>Loren Firsov</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>5</td>
+                            <td>35</td>
+                            <td>Vanessa Holy</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>6</td>
+                            <td>36</td>
+                            <td>Stephanie Michael</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.33</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>7</td>
+                            <td>43</td>
+                            <td>Michelle Boguslavsky</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                <h4 class="dance-title">Detailed Results: S</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Couple #</th>
+                            <th>Names</th>
+                            <th>Club</th>
+                            
+                            <th>Shimriel Davidov</th>
+                            
+                            <th>Evgenia Gromova</th>
+                            
+                            <th>Boris Zaltsman</th>
+                            
+                            
+                            <th>Average</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>30</td>
+                            <td>Amalia Zeltser</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>3.0</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>42</td>
+                            <td>Lian Milshtein</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>3</td>
+                            <td>28</td>
+                            <td>Loren Briskman</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>4</td>
+                            <td>34</td>
+                            <td>Loren Firsov</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>5</td>
+                            <td>35</td>
+                            <td>Vanessa Holy</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>6</td>
+                            <td>36</td>
+                            <td>Stephanie Michael</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    3
+                                
+                            </td>
+                            
+                            
+                            <td>2.67</td>
+                            
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>7</td>
+                            <td>43</td>
+                            <td>Michelle Boguslavsky</td>
+                            <td>Primestep</td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td>
+                                
+                                    2
+                                
+                            </td>
+                            
+                            
+                            <td>2.0</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+            </section>
+            
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://results.ristar.co">results.ristar.co</a>
+                <a href="https://www.ristar.co">WWW.RISTAR.CO</a>
+                <a href="https://registration.ristar.co">registration.ristar.co</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
