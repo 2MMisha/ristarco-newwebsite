@@ -10,7 +10,7 @@
       "description": "Maccabi Dance Avenue Int. Comp - 2025",
       "sponsors": ["2M Media"],
       "regulations": "Regulations are provided by WDSF and IDSF rules",
-      "schedule": "<div class=\"schedule-embed\"><iframe src=\"https://google.com\"></iframe></div>"
+      "schedule": "<H1>HEADING 1</H1> <li>li tag</li>"
     },
     "he": {
       "name": "Maccabi Dance Avenue Int. Comp - 2025",
@@ -18,7 +18,7 @@
       "description": "Maccabi Dance Avenue Int. Comp - 2025",
       "sponsors": ["2M Media"],
       "regulations": "תקנון וכללים של התחרות מסופק ע׳׳י ארגוני WDSF ו-IDSF",
-      "schedule": "<div class=\"schedule-embed\"><iframe src=\"https://google.com\"></iframe></div>"
+      "schedule": "<H1>HEADING 1</H1> <li>li tag</li>"
     },
     "ru": {
       "name": "Maccabi Dance Avenue Int. Comp - 2025",
@@ -26,7 +26,7 @@
       "description": "Maccabi Dance Avenue Int. Comp - 2025",
       "sponsors": ["2M Media"],
       "regulations": "Правила и регламент конкурса предрстваленны WDSF и IDSF",
-      "schedule": "<div class=\"schedule-embed\"><iframe src=\"https://google.com\"></iframe></div>",
+      "schedule": "<H1>HEADING 1</H1> <li>li tag</li>",
     }
   }
 }
