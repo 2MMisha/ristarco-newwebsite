@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — Page not found · RSM</title>
+  <link rel="icon" href="/assets/img/icon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Arimo:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rsm-blue: #0c57ab;
+      --rsm-blue-deep: #073a72;
+      --rsm-accent: #ff8a3d;
+      --rsm-accent-ink: #331700;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+      font-family: "Arimo", system-ui, sans-serif;
+      color: #fff;
+      text-align: center;
+      background:
+        radial-gradient(1100px 480px at 15% -10%, rgba(255,138,61,0.22), transparent 60%),
+        linear-gradient(160deg, var(--rsm-blue) 0%, var(--rsm-blue-deep) 100%);
+      overflow: hidden;
+    }
+    .card {
+      max-width: 480px;
+      animation: rise 0.7s ease both;
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .mark {
+      width: 160px;
+      height: auto;
+      color: var(--rsm-accent);
+      margin-bottom: 12px;
+    }
+    .code {
+      font-family: "Montserrat", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: clamp(4rem, 14vw, 6.5rem);
+      line-height: 1;
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    h1 {
+      font-family: "Montserrat", system-ui, sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      margin: 8px 0 6px;
+    }
+    p {
+      color: rgba(255,255,255,0.82);
+      margin: 0 0 28px;
+      font-size: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      font-family: "Montserrat", system-ui, sans-serif;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 13px 30px;
+      border-radius: 999px;
+      background: var(--rsm-accent);
+      color: var(--rsm-accent-ink);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .card { animation: none; }
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <svg class="mark" viewBox="0 0 200 120" aria-hidden="true">
+      <polyline points="4,100 40,80 76,88 112,48 148,58 196,12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M196 12 L200 22 L210 23 L202 30 L204 40 L196 35 L188 40 L190 30 L182 23 L192 22 Z" fill="currentColor"/>
+    </svg>
+    <p class="code">404</p>
+    <h1>This page took a wrong turn.</h1>
+    <p>The page you're looking for doesn't exist or may have moved.</p>
+    <a class="btn" href="/">Back to home</a>
+  </div>
+</body>
